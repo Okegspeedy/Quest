@@ -1,0 +1,1792 @@
+<sami>
+<head>
+<Title>Git and GitHub for Beginners - Crash Course</Title>
+<style type='text/css'><!--
+.en { Name:English; lang:en; SAMIType:CC; }
+--></style>
+</head>
+<body>
+<SYNC Start=0><P class='en'>Hi, everyone, welcome. In this video we are 
+going to learn about Git and GitHub, why they are  
+<SYNC Start=6570><P class='en'>&nbsp;
+<SYNC Start=6570><P class='en'>important and also how to use them. So we&#39;re going 
+to start off going over the terms and concepts  
+<SYNC Start=12540><P class='en'>&nbsp;
+<SYNC Start=12540><P class='en'>that you will use in git, and the ecosystem 
+and then get into practical applications. This  
+<SYNC Start=19770><P class='en'>&nbsp;
+<SYNC Start=19770><P class='en'>tutorial will include everything from basic Git 
+repositories, to what is GitHub, to some more  
+<SYNC Start=28200><P class='en'>&nbsp;
+<SYNC Start=28200><P class='en'>intermediate concepts like branching and merging 
+and forking and that kind of stuff. I want to  
+<SYNC Start=34080><P class='en'>&nbsp;
+<SYNC Start=34080><P class='en'>quickly introduce myself, my name is Gwen. And 
+I run a YouTube channel called Faraday Academy,  
+<SYNC Start=40380><P class='en'>&nbsp;
+<SYNC Start=40380><P class='en'>where I upload coding tutorial videos. And 
+I also do a couple of live streams a week,  
+<SYNC Start=47220><P class='en'>&nbsp;
+<SYNC Start=47220><P class='en'>mostly on Python and JavaScript topics, as well 
+as some more general purpose coding videos. You  
+<SYNC Start=55530><P class='en'>&nbsp;
+<SYNC Start=55530><P class='en'>can also find me on Twitter, and Instagram and 
+pretty much everywhere by typing in Gwen Faraday.  
+<SYNC Start=62760><P class='en'>&nbsp;
+<SYNC Start=62760><P class='en'>And let&#39;s get started with the tutorial. I want 
+to start off here by defining what Git is. Git is  
+<SYNC Start=73210><P class='en'>&nbsp;
+<SYNC Start=73210><P class='en'>what we call a version control system that is free 
+and open source. And it&#39;s the most widely used  
+<SYNC Start=80560><P class='en'>&nbsp;
+<SYNC Start=80560><P class='en'>version control system in development. Today, most 
+programmers interact with Git on a daily basis.  
+<SYNC Start=87250><P class='en'>&nbsp;
+<SYNC Start=87250><P class='en'>So what is version control? version control is 
+basically a way that we as programmers track our  
+<SYNC Start=96520><P class='en'>&nbsp;
+<SYNC Start=96520><P class='en'>code changes, we basically save an initial version 
+of our code into Git. And then when we update  
+<SYNC Start=104530><P class='en'>&nbsp;
+<SYNC Start=104530><P class='en'>code, we can save it into Git again, and again and 
+again and again. And throughout time as our code  
+<SYNC Start=112300><P class='en'>&nbsp;
+<SYNC Start=112300><P class='en'>continues to change, we can look back at all of 
+the changes we have made over time. This helps us  
+<SYNC Start=118210><P class='en'>&nbsp;
+<SYNC Start=118210><P class='en'>to see and understand what we did when, as well as 
+track down bugs, or go back to a previous version  
+<SYNC Start=126370><P class='en'>&nbsp;
+<SYNC Start=126370><P class='en'>of the code if we need to. So let&#39;s look at some 
+of the terms that you&#39;re going to see in this  
+<SYNC Start=132340><P class='en'>&nbsp;
+<SYNC Start=132340><P class='en'>video. First of all, I use the term directory, 
+which is also known as a folder on your computer.  
+<SYNC Start=139120><P class='en'>&nbsp;
+<SYNC Start=139120><P class='en'>When I reference the terminal or command line, I 
+basically mean an application that runs on your  
+<SYNC Start=144940><P class='en'>&nbsp;
+<SYNC Start=144940><P class='en'>computer, which is just an interface where you 
+can type in text commands, you can navigate around  
+<SYNC Start=151900><P class='en'>&nbsp;
+<SYNC Start=151900><P class='en'>files and folders, create files, change update 
+things, install and run programs, and much more.  
+<SYNC Start=160540><P class='en'>&nbsp;
+<SYNC Start=160540><P class='en'>You might also hear me use the term COI, which 
+is just the command line interface. Many programs  
+<SYNC Start=168040><P class='en'>&nbsp;
+<SYNC Start=168040><P class='en'>that you install, as a programmer will require 
+you to interact with them via text commands in  
+<SYNC Start=174970><P class='en'>&nbsp;
+<SYNC Start=174970><P class='en'>the command line. So you will be typing out 
+some text and hitting Enter instead of say  
+<SYNC Start=181030><P class='en'>&nbsp;
+<SYNC Start=181030><P class='en'>double clicking on a folder icon on your desktop. 
+Just think of it as another way to run a program.  
+<SYNC Start=187750><P class='en'>&nbsp;
+<SYNC Start=187750><P class='en'>Now you might be wondering, why are we going to 
+use the terminal or command line instead of using  
+<SYNC Start=193870><P class='en'>&nbsp;
+<SYNC Start=193870><P class='en'>one of these beautiful applications that handle 
+interacting with get for us? Well, as programmers,  
+<SYNC Start=201550><P class='en'>&nbsp;
+<SYNC Start=201550><P class='en'>it&#39;s always good to use the terminal. So you learn 
+the Git commands in workflow of Git as well as  
+<SYNC Start=207520><P class='en'>&nbsp;
+<SYNC Start=207520><P class='en'>become accustomed to it. As a developer, you are 
+going to be using the terminal a lot to install,  
+<SYNC Start=213130><P class='en'>&nbsp;
+<SYNC Start=213130><P class='en'>see allies run programs, search for things, 
+etc. Throughout your development career. And  
+<SYNC Start=218440><P class='en'>&nbsp;
+<SYNC Start=218440><P class='en'>learning Git is a great way to get started with 
+the command line. CD stands for change directory,  
+<SYNC Start=225130><P class='en'>&nbsp;
+<SYNC Start=225130><P class='en'>it&#39;s basically the same thing as when you double 
+click on a folder using the icons on your desktop.  
+<SYNC Start=232150><P class='en'>&nbsp;
+<SYNC Start=232150><P class='en'>While in the command line, if you want to move 
+into a folder, or even up to a parent folder,  
+<SYNC Start=238420><P class='en'>&nbsp;
+<SYNC Start=238420><P class='en'>you&#39;ll use CD, followed by the directions 
+to get to whatever folder on your system  
+<SYNC Start=244780><P class='en'>&nbsp;
+<SYNC Start=244780><P class='en'>you want to get to. A code editor, of course 
+is a place to write code. You&#39;ll probably see  
+<SYNC Start=251260><P class='en'>&nbsp;
+<SYNC Start=251260><P class='en'>this in a lot of different programming videos. 
+But just in case you are unfamiliar with it,  
+<SYNC Start=256540><P class='en'>&nbsp;
+<SYNC Start=256540><P class='en'>you can write code anywhere in a text document, 
+word processor anything. But there are special  
+<SYNC Start=263050><P class='en'>&nbsp;
+<SYNC Start=263050><P class='en'>ones that are designed with lots of tools and 
+features for programmers. And these are called  
+<SYNC Start=268750><P class='en'>&nbsp;
+<SYNC Start=268750><P class='en'>code editors. Now some people get confused by the 
+word repository because it has multiple meanings.  
+<SYNC Start=275770><P class='en'>&nbsp;
+<SYNC Start=275770><P class='en'>But in the world of programming, it usually refers 
+to a git repository, which is basically just your  
+<SYNC Start=283570><P class='en'>&nbsp;
+<SYNC Start=283570><P class='en'>project or the folder place where your project 
+is kept. You can call it a repository. People  
+<SYNC Start=290890><P class='en'>&nbsp;
+<SYNC Start=290890><P class='en'>also sometimes confuse Git and GitHub. Now Git 
+is the tool that tracks the changes in your code  
+<SYNC Start=298300><P class='en'>&nbsp;
+<SYNC Start=298300><P class='en'>over time. GitHub is a website where you host all 
+of your Git repositories. Being online, it makes  
+<SYNC Start=308410><P class='en'>&nbsp;
+<SYNC Start=308410><P class='en'>it easy to work in groups with other people, and 
+organize your projects into a portfolio for you to  
+<SYNC Start=316780><P class='en'>&nbsp;
+<SYNC Start=316780><P class='en'>show potential employers. So here are some of the 
+Git commands, we&#39;re going to cover in this video,  
+<SYNC Start=322540><P class='en'>&nbsp;
+<SYNC Start=322540><P class='en'>which you will be typing into your terminal or 
+command line on your computer. They are clone,  
+<SYNC Start=328660><P class='en'>&nbsp;
+<SYNC Start=328660><P class='en'>for example, if there&#39;s a repository that is not 
+on your local machine, but it&#39;s on GitHub, and you  
+<SYNC Start=335770><P class='en'>&nbsp;
+<SYNC Start=335770><P class='en'>want to bring it down on your local machine, so 
+you can use it locally, you use the clone command.  
+<SYNC Start=341050><P class='en'>&nbsp;
+<SYNC Start=341050><P class='en'>By the way, all of these commands are lowercase, 
+not uppercase, as we&#39;re going to see, as we go  
+<SYNC Start=347080><P class='en'>&nbsp;
+<SYNC Start=347080><P class='en'>through the examples in this video, when you have 
+updated files, or created or deleted files and  
+<SYNC Start=353410><P class='en'>&nbsp;
+<SYNC Start=353410><P class='en'>folders, you&#39;re going to want to tell get that you 
+made changes and that you would like Git to track  
+<SYNC Start=359260><P class='en'>&nbsp;
+<SYNC Start=359260><P class='en'>those changes. So you use the Add command for 
+that. As I said earlier, Git is there for you to  
+<SYNC Start=365710><P class='en'>&nbsp;
+<SYNC Start=365710><P class='en'>save the changes you make in your code. So you do 
+that through a commit, and we call it committing  
+<SYNC Start=372910><P class='en'>&nbsp;
+<SYNC Start=372910><P class='en'>your changes. Once you have made changes locally 
+on your computer, and you&#39;re ready to put them in  
+<SYNC Start=379270><P class='en'>&nbsp;
+<SYNC Start=379270><P class='en'>git, you tell Git to track them through the Add 
+command, you save your files to get through the  
+<SYNC Start=385180><P class='en'>&nbsp;
+<SYNC Start=385180><P class='en'>commit command. And then you upload your files 
+to a place like GitHub, or another what we call  
+<SYNC Start=392140><P class='en'>&nbsp;
+<SYNC Start=392140><P class='en'>remote repository, or GitHub alternative, like 
+Bitbucket, get lab, and there&#39;s many of them,  
+<SYNC Start=398230><P class='en'>&nbsp;
+<SYNC Start=398230><P class='en'>you do this through the push command. When there 
+are changes to your code on GitHub, and you want  
+<SYNC Start=405880><P class='en'>&nbsp;
+<SYNC Start=405880><P class='en'>to bring those to your local machine, then you use 
+the pull command, you pull down changes from the  
+<SYNC Start=412510><P class='en'>&nbsp;
+<SYNC Start=412510><P class='en'>remote repository. Those are all the commands 
+that I want to cover. To get started. Again,  
+<SYNC Start=417490><P class='en'>&nbsp;
+<SYNC Start=417490><P class='en'>we&#39;re going to go over examples of each of these. 
+The first thing you will need to do is of course,  
+<SYNC Start=423790><P class='en'>&nbsp;
+<SYNC Start=423790><P class='en'>sign up for an account on GitHub. This is pretty 
+straightforward. You enter minimal information,  
+<SYNC Start=429460><P class='en'>&nbsp;
+<SYNC Start=429460><P class='en'>and then you sign up for an account, you will get 
+an email that will ask you to verify and then you  
+<SYNC Start=434890><P class='en'>&nbsp;
+<SYNC Start=434890><P class='en'>can log into your account. When you log in, you 
+will either be on this page, which is your profile  
+<SYNC Start=440560><P class='en'>&nbsp;
+<SYNC Start=440560><P class='en'>page that you can access from this drop down menu, 
+or you might be on the dashboard page here. Either  
+<SYNC Start=448450><P class='en'>&nbsp;
+<SYNC Start=448450><P class='en'>way, you will have access to this green button 
+here, or this plus sign and the drop down here  
+<SYNC Start=454810><P class='en'>&nbsp;
+<SYNC Start=454810><P class='en'>where you can create a new repository. Now a 
+repository is basically a project. It&#39;s all of  
+<SYNC Start=462340><P class='en'>&nbsp;
+<SYNC Start=462340><P class='en'>your coding files and folders for whatever kind 
+of application that you&#39;re building. For example,  
+<SYNC Start=468400><P class='en'>&nbsp;
+<SYNC Start=468400><P class='en'>this is a repository that I have, it&#39;s for 
+a curriculum app that I&#39;ve been building,  
+<SYNC Start=473590><P class='en'>&nbsp;
+<SYNC Start=473590><P class='en'>you can see the mockups pretty straightforward 
+application. And in this repository, this is my  
+<SYNC Start=480730><P class='en'>&nbsp;
+<SYNC Start=480730><P class='en'>complete project with the folders and all of my 
+coding files are inside of these folders. For  
+<SYNC Start=486640><P class='en'>&nbsp;
+<SYNC Start=486640><P class='en'>this one application, each application or project 
+is in a separate repository. So I&#39;m going to go  
+<SYNC Start=492730><P class='en'>&nbsp;
+<SYNC Start=492730><P class='en'>ahead and create a new repository here, give it a 
+name demo repo. By the way repo is just short for  
+<SYNC Start=500410><P class='en'>&nbsp;
+<SYNC Start=500410><P class='en'>repository. I&#39;m going to leave these settings as 
+they are and click Create repository. Now you can  
+<SYNC Start=511060><P class='en'>&nbsp;
+<SYNC Start=511060><P class='en'>create your files and folders for this repository 
+locally on your machine. Or you can create them  
+<SYNC Start=517570><P class='en'>&nbsp;
+<SYNC Start=517570><P class='en'>straight in the online editor on the GitHub 
+website. So I&#39;m going to go ahead and create a  
+<SYNC Start=523810><P class='en'>&nbsp;
+<SYNC Start=523810><P class='en'>basic markdown file called a readme. And this is 
+the most basic file that you will find in almost  
+<SYNC Start=530680><P class='en'>&nbsp;
+<SYNC Start=530680><P class='en'>every project that contains text to describe 
+what the project is about what it does, and  
+<SYNC Start=536140><P class='en'>&nbsp;
+<SYNC Start=536140><P class='en'>any other relevant information. So I&#39;m going to 
+click here, create a new file, I&#39;m going to name  
+<SYNC Start=541780><P class='en'>&nbsp;
+<SYNC Start=541780><P class='en'>it readme.md for markdown. markdown is basically 
+an easy way to format your text in these sort of  
+<SYNC Start=550870><P class='en'>&nbsp;
+<SYNC Start=550870><P class='en'>files. So I&#39;m going to come down here and type 
+some text. Now markdown has all the shortcuts  
+<SYNC Start=557350><P class='en'>&nbsp;
+<SYNC Start=557350><P class='en'>like one hash tag for a main header. So I&#39;m just 
+going to put demo here and then some plain text,  
+<SYNC Start=564820><P class='en'>&nbsp;
+<SYNC Start=564820><P class='en'>so I&#39;ll put some description. And then I&#39;ll scroll 
+to the bottom to commit the file. In other words,  
+<SYNC Start=573070><P class='en'>&nbsp;
+<SYNC Start=573070><P class='en'>save this file. I just want to point out really 
+quickly that this create readme.md is placeholder  
+<SYNC Start=580150><P class='en'>&nbsp;
+<SYNC Start=580150><P class='en'>text. But if you don&#39;t write anything else here, 
+and when I commit this, it will use this text as  
+<SYNC Start=585730><P class='en'>&nbsp;
+<SYNC Start=585730><P class='en'>the default. So let me commit. And you can see 
+here that this is the commit message from when I  
+<SYNC Start=593290><P class='en'>&nbsp;
+<SYNC Start=593290><P class='en'>saved this README file. And now you can see the 
+readme file, which because it&#39;s named README,  
+<SYNC Start=599890><P class='en'>&nbsp;
+<SYNC Start=599890><P class='en'>dot MD is the default file that GitHub always 
+shows down here. I can also go into the file here,  
+<SYNC Start=608050><P class='en'>&nbsp;
+<SYNC Start=608050><P class='en'>which is the same thing, except with a few 
+different options here. And in either screen,  
+<SYNC Start=613540><P class='en'>&nbsp;
+<SYNC Start=613540><P class='en'>I have this edit this file option. So I&#39;m going to 
+go ahead and do that. I&#39;m going to simply change  
+<SYNC Start=619900><P class='en'>&nbsp;
+<SYNC Start=619900><P class='en'>this to an exclamation point. Now the default 
+text instead of create readme.md is now update  
+<SYNC Start=628690><P class='en'>&nbsp;
+<SYNC Start=628690><P class='en'>readme.md, which isn&#39;t that descriptive, but it&#39;s 
+okay for right now. So I&#39;m going to commit, and by  
+<SYNC Start=635920><P class='en'>&nbsp;
+<SYNC Start=635920><P class='en'>committing, I saved my changes here. And if I go 
+to the demo repo, it shows my last commit message  
+<SYNC Start=642790><P class='en'>&nbsp;
+<SYNC Start=642790><P class='en'>here as update readme.md. Now, if I want to see 
+my entire history of changes, in other words,  
+<SYNC Start=650140><P class='en'>&nbsp;
+<SYNC Start=650140><P class='en'>every commit that I&#39;ve made, I can come here to 
+commits. And each commit has a unique identifier.  
+<SYNC Start=656440><P class='en'>&nbsp;
+<SYNC Start=656440><P class='en'>And I can also see the message or the title that 
+I wrote on these commits, I can come back to this  
+<SYNC Start=663160><P class='en'>&nbsp;
+<SYNC Start=663160><P class='en'>one and see what was added this green with the 
+plus signs means these lines were added to this  
+<SYNC Start=669790><P class='en'>&nbsp;
+<SYNC Start=669790><P class='en'>file. And then I&#39;ll go back, and in the updated 
+commit, it shows me this red with a minus sign,  
+<SYNC Start=677530><P class='en'>&nbsp;
+<SYNC Start=677530><P class='en'>that means this line was deleted, and then the 
+green with the plus means this line was added,  
+<SYNC Start=683050><P class='en'>&nbsp;
+<SYNC Start=683050><P class='en'>anything that&#39;s white means it stayed the same. 
+So this is a very basic view of seeing changes.  
+<SYNC Start=689740><P class='en'>&nbsp;
+<SYNC Start=689740><P class='en'>Now what about using this on your local machine, 
+if you are using a Mac or Linux operating system,  
+<SYNC Start=697510><P class='en'>&nbsp;
+<SYNC Start=697510><P class='en'>you should already have Git installed. You can 
+check this by opening your terminal or command  
+<SYNC Start=704350><P class='en'>&nbsp;
+<SYNC Start=704350><P class='en'>line application and typing in get space dash 
+dash version. If Git is not already installed,  
+<SYNC Start=713650><P class='en'>&nbsp;
+<SYNC Start=713650><P class='en'>I highly recommend checking out this tutorial by 
+Atlassian, which I will link in the description  
+<SYNC Start=719860><P class='en'>&nbsp;
+<SYNC Start=719860><P class='en'>below. It walks you through how to install Git 
+on any operating system. Now I do want to note  
+<SYNC Start=726760><P class='en'>&nbsp;
+<SYNC Start=726760><P class='en'>for the Windows installation, when you download 
+the get Windows Installer, I recommend you choose  
+<SYNC Start=732970><P class='en'>&nbsp;
+<SYNC Start=732970><P class='en'>the Git Bash option from the install menu. You 
+can of course use Command Prompt and it will set  
+<SYNC Start=739990><P class='en'>&nbsp;
+<SYNC Start=739990><P class='en'>up get in command prompt for you. But in the past, 
+I&#39;ve had an easier time with Git Bash on Windows.  
+<SYNC Start=745540><P class='en'>&nbsp;
+<SYNC Start=745540><P class='en'>for Mac, it gives you a few different options 
+for install. But I highly recommend you use the  
+<SYNC Start=753460><P class='en'>&nbsp;
+<SYNC Start=753460><P class='en'>homebrew package manager if you can. And it takes 
+you through all of the steps here. But again,  
+<SYNC Start=759550><P class='en'>&nbsp;
+<SYNC Start=759550><P class='en'>you probably already have Git installed if 
+you&#39;re using a Mac or Linux and don&#39;t need  
+<SYNC Start=765220><P class='en'>&nbsp;
+<SYNC Start=765220><P class='en'>to worry about this. There&#39;s just one more piece 
+of setup before we continue with the rest of the  
+<SYNC Start=771790><P class='en'>&nbsp;
+<SYNC Start=771790><P class='en'>Git tutorial. And that is getting a code editor. 
+Of course, you can write code in whatever you  
+<SYNC Start=778060><P class='en'>&nbsp;
+<SYNC Start=778060><P class='en'>want. Any type of word processing software we&#39;ll 
+do from Notepad, Microsoft Word, but there are  
+<SYNC Start=784600><P class='en'>&nbsp;
+<SYNC Start=784600><P class='en'>specific ones may for coding, and many of them are 
+really good and free. Visual Studio code is a free  
+<SYNC Start=791320><P class='en'>&nbsp;
+<SYNC Start=791320><P class='en'>code editor made by Microsoft is widely used with 
+people learning to code and professionals alike.  
+<SYNC Start=797590><P class='en'>&nbsp;
+<SYNC Start=797590><P class='en'>So you can install it for free from code dot 
+visual studio.com. It&#39;s available on every major  
+<SYNC Start=805270><P class='en'>&nbsp;
+<SYNC Start=805270><P class='en'>operating system, Mac, Windows and Linux. Now 
+I have Visual Studio Code open with no files or  
+<SYNC Start=814150><P class='en'>&nbsp;
+<SYNC Start=814150><P class='en'>folders inside. If you haven&#39;t used this before, 
+then all of these icons on the side are how you&#39;re  
+<SYNC Start=820990><P class='en'>&nbsp;
+<SYNC Start=820990><P class='en'>going to navigate around your project and use your 
+tools. So I&#39;m going to come to this top one. And  
+<SYNC Start=827050><P class='en'>&nbsp;
+<SYNC Start=827050><P class='en'>this bar comes out where I&#39;m going to see all my 
+files and folders, I&#39;m just going to open a folder  
+<SYNC Start=832240><P class='en'>&nbsp;
+<SYNC Start=832240><P class='en'>real quick. In this test folder, when you go to 
+my git, then this is an empty folder that I have,  
+<SYNC Start=838720><P class='en'>&nbsp;
+<SYNC Start=838720><P class='en'>I&#39;m going to click Open. And now I have a folder 
+that&#39;s open in Visual Studio code that I can  
+<SYNC Start=844930><P class='en'>&nbsp;
+<SYNC Start=844930><P class='en'>actually add files and folders to but I&#39;m not 
+going to right now because I&#39;m actually going  
+<SYNC Start=849430><P class='en'>&nbsp;
+<SYNC Start=849430><P class='en'>to pull the repo that we created at the beginning 
+of this tutorial here on GitHub, I&#39;m going to pull  
+<SYNC Start=856030><P class='en'>&nbsp;
+<SYNC Start=856030><P class='en'>that to my local system using Git. So in Visual 
+Studio code, I have access to a terminal from here  
+<SYNC Start=863350><P class='en'>&nbsp;
+<SYNC Start=863350><P class='en'>that I&#39;m going to use. If I come up to the top, in 
+the View menu, I&#39;m going to come to terminal and  
+<SYNC Start=869560><P class='en'>&nbsp;
+<SYNC Start=870670><P class='en'>select it. And now it opens this terminal here. 
+By the way, the only reason why this is good is  
+<SYNC Start=876340><P class='en'>&nbsp;
+<SYNC Start=876340><P class='en'>because my folder is named Git. And because I&#39;ve 
+opened the folder here, it automatically uses  
+<SYNC Start=882790><P class='en'>&nbsp;
+<SYNC Start=882790><P class='en'>that as the directory for my terminal. So now I 
+want to clone down my repo to my local machine.  
+<SYNC Start=889180><P class='en'>&nbsp;
+<SYNC Start=889180><P class='en'>I want to pull all that code down here so I can 
+work with it locally. I&#39;m going to use a command  
+<SYNC Start=894400><P class='en'>&nbsp;
+<SYNC Start=894400><P class='en'>called git clone. And then in clone or download 
+here, clone with SSH Exactly what we just set up.  
+<SYNC Start=901510><P class='en'>&nbsp;
+<SYNC Start=901510><P class='en'>So I&#39;m going to copy this, go back to my terminal 
+and paste. And I&#39;ll hit Enter. And now we can see  
+<SYNC Start=908920><P class='en'>&nbsp;
+<SYNC Start=908920><P class='en'>a folder here, which is my repo from GitHub that&#39;s 
+pulled down into the directory that I&#39;m in. So I&#39;m  
+<SYNC Start=917080><P class='en'>&nbsp;
+<SYNC Start=917080><P class='en'>going to move inside this folder real quick from 
+the command line, which I can just do by CD, and  
+<SYNC Start=922990><P class='en'>&nbsp;
+<SYNC Start=922990><P class='en'>then the name of the folder to change directory 
+into the folder. So now I am inside of the folder  
+<SYNC Start=929590><P class='en'>&nbsp;
+<SYNC Start=929590><P class='en'>demo repo, which was the name of the repository 
+we created on GitHub. So when it pulled it down,  
+<SYNC Start=935440><P class='en'>&nbsp;
+<SYNC Start=935440><P class='en'>it gave the folder this name, so my whole 
+repositories inside of that folder, and now  
+<SYNC Start=940600><P class='en'>&nbsp;
+<SYNC Start=940600><P class='en'>it says Git master. Now, this may look different 
+on your machine, this part looks different on  
+<SYNC Start=946180><P class='en'>&nbsp;
+<SYNC Start=946180><P class='en'>every machine. I have a specific setup to make it 
+look like this. But either way, you will probably  
+<SYNC Start=952600><P class='en'>&nbsp;
+<SYNC Start=952600><P class='en'>see some kind of indication that you are in a 
+git repository now. Now, how do you know this  
+<SYNC Start=959710><P class='en'>&nbsp;
+<SYNC Start=959710><P class='en'>looks like a regular folder and a regular README 
+file? Well, there&#39;s actually a hidden folder that  
+<SYNC Start=965590><P class='en'>&nbsp;
+<SYNC Start=965590><P class='en'>you can&#39;t see here. And that you won&#39;t see on 
+most operating systems unless you have selected  
+<SYNC Start=971380><P class='en'>&nbsp;
+<SYNC Start=971380><P class='en'>to show hidden folders. And that is called the 
+dot get directory. So there&#39;s just a special  
+<SYNC Start=977500><P class='en'>&nbsp;
+<SYNC Start=977500><P class='en'>command in my terminal that I will use to show you 
+that folder. Now the LA command that I use here  
+<SYNC Start=983770><P class='en'>&nbsp;
+<SYNC Start=983770><P class='en'>is actually a Mac shorthand for ls space, dash l 
+A, which means list everything in the directory,  
+<SYNC Start=994600><P class='en'>&nbsp;
+<SYNC Start=994600><P class='en'>including hidden files and folders. So if you&#39;re 
+not on a Mac, I don&#39;t think la will work for you.  
+<SYNC Start=1000540><P class='en'>&nbsp;
+<SYNC Start=1000540><P class='en'>But you can use ls space dash LA to do the same 
+thing. So you can see, here&#39;s the readme file, and  
+<SYNC Start=1007930><P class='en'>&nbsp;
+<SYNC Start=1007930><P class='en'>then there&#39;s something dot Git. And because it&#39;s 
+blue here, that means it&#39;s actually a folder. And  
+<SYNC Start=1014290><P class='en'>&nbsp;
+<SYNC Start=1014290><P class='en'>this hidden Git folder, actually stores all of the 
+files that save your commits, or your code changes  
+<SYNC Start=1022570><P class='en'>&nbsp;
+<SYNC Start=1022570><P class='en'>over time. It has all of the changes recorded in 
+the history of this repository, which includes the  
+<SYNC Start=1030730><P class='en'>&nbsp;
+<SYNC Start=1030730><P class='en'>ones we made on github.com. So now let&#39;s make some 
+more locally, we&#39;re going to go into the readme  
+<SYNC Start=1036340><P class='en'>&nbsp;
+<SYNC Start=1036339><P class='en'>file, and come here and add a sub header. Not too 
+creative, I&#39;m just going to call it sub header,  
+<SYNC Start=1043359><P class='en'>&nbsp;
+<SYNC Start=1043360><P class='en'>and then some more text. Now that I have changed 
+this file, I need to save the changes in Git. So  
+<SYNC Start=1054850><P class='en'>&nbsp;
+<SYNC Start=1054850><P class='en'>I do that through a commit still. So first, I&#39;m 
+going to use the git status command. Now the git  
+<SYNC Start=1061090><P class='en'>&nbsp;
+<SYNC Start=1061090><P class='en'>status command shows me all of the files that were 
+updated or created or deleted, but haven&#39;t been  
+<SYNC Start=1067240><P class='en'>&nbsp;
+<SYNC Start=1067240><P class='en'>saved in a commit yet. So for example, if I come 
+here, and I create a new file, I&#39;m going to call  
+<SYNC Start=1074290><P class='en'>&nbsp;
+<SYNC Start=1074290><P class='en'>this index dot HTML. And I&#39;m just going to put a 
+quick div inside with nothing else. And now let me  
+<SYNC Start=1085420><P class='en'>&nbsp;
+<SYNC Start=1085420><P class='en'>rerun the git status command. And now you can see 
+I have one file that&#39;s been modified. And one file  
+<SYNC Start=1091870><P class='en'>&nbsp;
+<SYNC Start=1091870><P class='en'>that it says is untracked, meaning Git doesn&#39;t 
+know about this file yet. So you have to tell Git  
+<SYNC Start=1098170><P class='en'>&nbsp;
+<SYNC Start=1098170><P class='en'>to track the file before you can save it to get 
+to do that, you need to use the git add command,  
+<SYNC Start=1104380><P class='en'>&nbsp;
+<SYNC Start=1104380><P class='en'>and then tell it which files to track. Now most of 
+the time, or a lot of the time you see people use  
+<SYNC Start=1110620><P class='en'>&nbsp;
+<SYNC Start=1110620><P class='en'>a period, which means you&#39;re telling Git to track 
+all of the files that are listed here, in both  
+<SYNC Start=1117160><P class='en'>&nbsp;
+<SYNC Start=1117160><P class='en'>the untracked and the modified section. So both 
+the changes we made to read me and the new file  
+<SYNC Start=1124060><P class='en'>&nbsp;
+<SYNC Start=1124060><P class='en'>index dot HTML would be staged with Git if we did 
+git add period, because includes all of the files,  
+<SYNC Start=1132190><P class='en'>&nbsp;
+<SYNC Start=1132190><P class='en'>you could also optionally tell it just the names 
+of each individual file or folder that you want  
+<SYNC Start=1141490><P class='en'>&nbsp;
+<SYNC Start=1141490><P class='en'>Git to track. In this case, I&#39;m just going to use 
+the dot. Now I&#39;m going to use git status again.  
+<SYNC Start=1148930><P class='en'>&nbsp;
+<SYNC Start=1148930><P class='en'>And now you can see that all of the changes have 
+been tracked. That&#39;s why they show up differently  
+<SYNC Start=1153880><P class='en'>&nbsp;
+<SYNC Start=1153880><P class='en'>now, and they are ready to be committed. So I&#39;m 
+going to come here and do git commit dash m.  
+<SYNC Start=1161770><P class='en'>&nbsp;
+<SYNC Start=1161770><P class='en'>now dash M is for message. And you need to have a 
+message in order to commit your files. The message  
+<SYNC Start=1169450><P class='en'>&nbsp;
+<SYNC Start=1169450><P class='en'>could be one character in meaningless if you want, 
+but there needs to be a message. And ideally,  
+<SYNC Start=1174700><P class='en'>&nbsp;
+<SYNC Start=1174700><P class='en'>that message should have something to do with the 
+what and why behind the commit you&#39;re making. So  
+<SYNC Start=1182140><P class='en'>&nbsp;
+<SYNC Start=1182140><P class='en'>I&#39;m going to add a message here. Added index dot 
+HTML. And this is just the title of the message.  
+<SYNC Start=1189370><P class='en'>&nbsp;
+<SYNC Start=1189370><P class='en'>If you remember from the web interface, there 
+were two boxes, a title and a description. This  
+<SYNC Start=1195070><P class='en'>&nbsp;
+<SYNC Start=1195070><P class='en'>first dash M and what&#39;s inside of the quotes 
+is a message You can add a second one for the  
+<SYNC Start=1201700><P class='en'>&nbsp;
+<SYNC Start=1201700><P class='en'>description box. So I can say some description. 
+And I&#39;ll click Enter. And now it gives me some  
+<SYNC Start=1210250><P class='en'>&nbsp;
+<SYNC Start=1210250><P class='en'>information, two files change five insertions. 
+But we&#39;ve still only saved our code locally. The  
+<SYNC Start=1216310><P class='en'>&nbsp;
+<SYNC Start=1216310><P class='en'>commit isn&#39;t live on GitHub yet. We make it live 
+by using another Git command called git push,  
+<SYNC Start=1223180><P class='en'>&nbsp;
+<SYNC Start=1223180><P class='en'>which means I want to push this live to a 
+remote repository where my project is hosted.  
+<SYNC Start=1230170><P class='en'>&nbsp;
+<SYNC Start=1233220><P class='en'>In order to push them to GitHub under your 
+account, you&#39;re going to have to prove to  
+<SYNC Start=1238830><P class='en'>&nbsp;
+<SYNC Start=1238830><P class='en'>GitHub that you are the owner of your account. 
+So you have to connect your local machine to  
+<SYNC Start=1245490><P class='en'>&nbsp;
+<SYNC Start=1245490><P class='en'>your GitHub account somehow. The way this is 
+done is by using SSH keys, you need to start  
+<SYNC Start=1252660><P class='en'>&nbsp;
+<SYNC Start=1252660><P class='en'>by generating a key locally using the SSH key Gen 
+command, then you specify the type of encryption,  
+<SYNC Start=1259530><P class='en'>&nbsp;
+<SYNC Start=1259530><P class='en'>and then the strength of encryption. And at 
+the end, you need to include your GitHub email  
+<SYNC Start=1266310><P class='en'>&nbsp;
+<SYNC Start=1266310><P class='en'>address, this is just a test for me, because I 
+already have key set up. So I&#39;m just going to  
+<SYNC Start=1271350><P class='en'>&nbsp;
+<SYNC Start=1271350><P class='en'>put a fake email address. But make sure that the 
+email address you enter here is the same one you  
+<SYNC Start=1278430><P class='en'>&nbsp;
+<SYNC Start=1278430><P class='en'>use to log into your GitHub account, click Enter. 
+Now, the default file for the SSH key is inside  
+<SYNC Start=1286170><P class='en'>&nbsp;
+<SYNC Start=1286170><P class='en'>your user directory in the dot SSH directory, and 
+it will be called ID underscore RSA. I&#39;m going to  
+<SYNC Start=1293730><P class='en'>&nbsp;
+<SYNC Start=1293730><P class='en'>give it a different name here, because I already 
+have a key under that name. You can optionally  
+<SYNC Start=1298050><P class='en'>&nbsp;
+<SYNC Start=1298050><P class='en'>enter a passphrase for your key here, or leave 
+it blank. So I&#39;m just going to click Enter to  
+<SYNC Start=1303000><P class='en'>&nbsp;
+<SYNC Start=1303000><P class='en'>leave it blank. And my key has been generated. 
+Now I am going to search for the key that I just  
+<SYNC Start=1308910><P class='en'>&nbsp;
+<SYNC Start=1308910><P class='en'>generated. And now I find that there are two. So 
+there&#39;s test key and test key dot pub. So test key  
+<SYNC Start=1316440><P class='en'>&nbsp;
+<SYNC Start=1316440><P class='en'>dot pub is the key that you&#39;re going to upload to 
+your GitHub interface. pub stands for public, it&#39;s  
+<SYNC Start=1324720><P class='en'>&nbsp;
+<SYNC Start=1324720><P class='en'>called your public key, which means that it&#39;s okay 
+for other people to see this key. The key that was  
+<SYNC Start=1331020><P class='en'>&nbsp;
+<SYNC Start=1331020><P class='en'>generated without the dot pub extension is called 
+your private key, and is the one that you have to  
+<SYNC Start=1336930><P class='en'>&nbsp;
+<SYNC Start=1336930><P class='en'>keep secure on your local machine, you don&#39;t share 
+this key with anybody. How it works is that the  
+<SYNC Start=1343020><P class='en'>&nbsp;
+<SYNC Start=1343020><P class='en'>public key you put on GitHub, and then every time 
+you want to connect to GitHub or push your code on  
+<SYNC Start=1350100><P class='en'>&nbsp;
+<SYNC Start=1350100><P class='en'>GitHub or use your account via your local machine, 
+you use your private key to show GitHub, that you  
+<SYNC Start=1358800><P class='en'>&nbsp;
+<SYNC Start=1358800><P class='en'>are the one that generated this public key. It&#39;s 
+a mathematical proof that only this private key  
+<SYNC Start=1365460><P class='en'>&nbsp;
+<SYNC Start=1365460><P class='en'>could have generated this public key. I&#39;m going 
+to print out this public key. And your key should  
+<SYNC Start=1373440><P class='en'>&nbsp;
+<SYNC Start=1373440><P class='en'>look something like this SSH dash, RSA starts with 
+this, it has a bunch of characters in the middle  
+<SYNC Start=1380310><P class='en'>&nbsp;
+<SYNC Start=1380310><P class='en'>and it ends with your email. Now you need to copy 
+this whole key, which you can do by highlighting  
+<SYNC Start=1386700><P class='en'>&nbsp;
+<SYNC Start=1386700><P class='en'>it in your terminal or command line, which 
+automatically copies it, you don&#39;t need to do  
+<SYNC Start=1391500><P class='en'>&nbsp;
+<SYNC Start=1391500><P class='en'>Ctrl or Command C, because Ctrl C actually means 
+something completely different in the terminal,  
+<SYNC Start=1397800><P class='en'>&nbsp;
+<SYNC Start=1397800><P class='en'>not copy. There&#39;s also a terminal command that 
+allows you to copy it&#39;s called PB copy. And then  
+<SYNC Start=1404970><P class='en'>&nbsp;
+<SYNC Start=1404970><P class='en'>you do the less than symbol and then the path to 
+your file. So it&#39;s in our user home directory.  
+<SYNC Start=1411540><P class='en'>&nbsp;
+<SYNC Start=1411540><P class='en'>And I didn&#39;t actually push it, put it in the dot 
+SSH directory, but this is the directory you would  
+<SYNC Start=1416850><P class='en'>&nbsp;
+<SYNC Start=1416850><P class='en'>have your key in. And then it&#39;s just test key 
+dot pub. And now it&#39;s copied to my clipboard on  
+<SYNC Start=1424080><P class='en'>&nbsp;
+<SYNC Start=1424080><P class='en'>GitHub. I&#39;m going to go to Settings. And in the 
+list of all settings, I&#39;m going to go to SSH and  
+<SYNC Start=1430950><P class='en'>&nbsp;
+<SYNC Start=1430950><P class='en'>GPG keys, and you can see any SSH keys associated 
+with your account. Then you just click on new SSH  
+<SYNC Start=1438720><P class='en'>&nbsp;
+<SYNC Start=1438720><P class='en'>key, you can give it whatever title you want. 
+This is just for your reference. And then you  
+<SYNC Start=1444420><P class='en'>&nbsp;
+<SYNC Start=1444420><P class='en'>paste your key in here. And I&#39;m going to remove 
+the extra enter at the end. And now add SSH key  
+<SYNC Start=1451380><P class='en'>&nbsp;
+<SYNC Start=1451380><P class='en'>to confirm my password. And now you can see 
+my key was successfully added. The only thing  
+<SYNC Start=1458100><P class='en'>&nbsp;
+<SYNC Start=1458100><P class='en'>left to do is to make sure that your local Git 
+command line interface knows about the key you  
+<SYNC Start=1464400><P class='en'>&nbsp;
+<SYNC Start=1464400><P class='en'>just generated. And I&#39;m going to link all of these 
+steps in the description below. You need to start  
+<SYNC Start=1470340><P class='en'>&nbsp;
+<SYNC Start=1470340><P class='en'>the SSH agent. Then if you&#39;re using version 10 
+point 12.2 or later, you will need to modify this  
+<SYNC Start=1478860><P class='en'>&nbsp;
+<SYNC Start=1478860><P class='en'>file your SSH config and add this text to it. I&#39;m 
+going to just show you how to get into that file.  
+<SYNC Start=1486330><P class='en'>&nbsp;
+<SYNC Start=1486330><P class='en'>Now. Paste the location of the file in your SSH 
+directory and then anywhere in this file, perhaps  
+<SYNC Start=1493260><P class='en'>&nbsp;
+<SYNC Start=1493260><P class='en'>at the end, you can paste in that information. 
+I&#39;m not going to do that because I already have  
+<SYNC Start=1499260><P class='en'>&nbsp;
+<SYNC Start=1499260><P class='en'>my file set up So I&#39;m going to delete it. After 
+you do that, you&#39;ll run this SSH add command from  
+<SYNC Start=1505780><P class='en'>&nbsp;
+<SYNC Start=1505780><P class='en'>your terminal. And then your key will be set up to 
+work with Git. Again, all of the information that  
+<SYNC Start=1513070><P class='en'>&nbsp;
+<SYNC Start=1513070><P class='en'>I covered with keys here is going to be linked in 
+the description below. But this is the general way  
+<SYNC Start=1518800><P class='en'>&nbsp;
+<SYNC Start=1518800><P class='en'>that you will do it with any operating system, 
+although there might be some slight variations.  
+<SYNC Start=1523900><P class='en'>&nbsp;
+<SYNC Start=1527850><P class='en'>Now there are two more arguments we have to put 
+here. The first one is origin. And the second one  
+<SYNC Start=1534750><P class='en'>&nbsp;
+<SYNC Start=1534750><P class='en'>is master. Now origin is an option set for us 
+here, and is basically a word that stands for  
+<SYNC Start=1542550><P class='en'>&nbsp;
+<SYNC Start=1542550><P class='en'>the location of our Git repository. Master is the 
+branch that we want to push to. And we&#39;ll get into  
+<SYNC Start=1548790><P class='en'>&nbsp;
+<SYNC Start=1548790><P class='en'>what that means in a minute. When I click Enter, 
+and now I&#39;ll refresh this page. And you can see my  
+<SYNC Start=1555600><P class='en'>&nbsp;
+<SYNC Start=1555600><P class='en'>code changes are all live on GitHub. Now, you can 
+also see that there are three commits to that we  
+<SYNC Start=1563730><P class='en'>&nbsp;
+<SYNC Start=1563730><P class='en'>made online on github.com, and one that we made 
+locally and pushed up to github.com. Of course,  
+<SYNC Start=1572010><P class='en'>&nbsp;
+<SYNC Start=1572010><P class='en'>this was our commit message that we made locally. 
+And this was the description that we wrote,  
+<SYNC Start=1577770><P class='en'>&nbsp;
+<SYNC Start=1577770><P class='en'>after that second dash m, we can see all of our 
+file changes that we made locally here as well.  
+<SYNC Start=1584310><P class='en'>&nbsp;
+<SYNC Start=1584310><P class='en'>So this was to demonstrate how to create a new 
+Git repository using GitHub. But what about if  
+<SYNC Start=1590760><P class='en'>&nbsp;
+<SYNC Start=1590760><P class='en'>you start a repo locally, so let me exit out 
+of these. And I will create a new folder here  
+<SYNC Start=1597210><P class='en'>&nbsp;
+<SYNC Start=1597210><P class='en'>called demo repo to drag it outside. So now it&#39;s 
+in a completely separate folder from the other  
+<SYNC Start=1608100><P class='en'>&nbsp;
+<SYNC Start=1608100><P class='en'>Git repository that we have. But this one&#39;s 
+not a git repository yet, and nothing&#39;s in  
+<SYNC Start=1612750><P class='en'>&nbsp;
+<SYNC Start=1612750><P class='en'>there. So I&#39;m going to move into that folder in 
+the terminal. Demo two. So now I&#39;m in demo two,  
+<SYNC Start=1621870><P class='en'>&nbsp;
+<SYNC Start=1621870><P class='en'>you can see it&#39;s not a git repository. Even if I 
+look for that hidden Git folder, it&#39;s not there.  
+<SYNC Start=1628590><P class='en'>&nbsp;
+<SYNC Start=1628590><P class='en'>So let me first add a file in here. And I&#39;m 
+again, going to add a readme file that MD and  
+<SYNC Start=1636180><P class='en'>&nbsp;
+<SYNC Start=1636180><P class='en'>I&#39;m going to add a header demo to and some text. 
+Now, if I want to turn this into a git repository,  
+<SYNC Start=1645150><P class='en'>&nbsp;
+<SYNC Start=1645150><P class='en'>I can use the command line and say Git init. And 
+it says initialize Git repository in yada yada,  
+<SYNC Start=1653940><P class='en'>&nbsp;
+<SYNC Start=1653940><P class='en'>this folder, and now you can see I have the 
+get keyword there. And if I do get status,  
+<SYNC Start=1661720><P class='en'>&nbsp;
+<SYNC Start=1661720><P class='en'>I can see there&#39;s this untracked README file, I 
+will go ahead and add that file, either with the  
+<SYNC Start=1670090><P class='en'>&nbsp;
+<SYNC Start=1670090><P class='en'>period or the name of the file. git status again, 
+okay, so the file is ready to be committed. And  
+<SYNC Start=1677650><P class='en'>&nbsp;
+<SYNC Start=1677650><P class='en'>now I will do git commit dash m, created README. 
+And now I&#39;ll put a description here, and Enter.  
+<SYNC Start=1690310><P class='en'>&nbsp;
+<SYNC Start=1690310><P class='en'>Now what if I want to push this live? Let&#39;s try 
+git push origin master. And now you can see it&#39;s  
+<SYNC Start=1698499><P class='en'>&nbsp;
+<SYNC Start=1698500><P class='en'>giving me this error fatal origin does not appear 
+to be a git repository. Because we didn&#39;t clone  
+<SYNC Start=1704740><P class='en'>&nbsp;
+<SYNC Start=1704740><P class='en'>this down from a git repository. We didn&#39;t already 
+create this repo on GitHub, we created it locally.  
+<SYNC Start=1711310><P class='en'>&nbsp;
+<SYNC Start=1711310><P class='en'>So Git is saying I have no idea where to push this 
+to because it&#39;s not connected to anything. So we  
+<SYNC Start=1717250><P class='en'>&nbsp;
+<SYNC Start=1717250><P class='en'>have to create that connection. And first, the 
+easiest way to do this is by creating an empty  
+<SYNC Start=1723100><P class='en'>&nbsp;
+<SYNC Start=1723100><P class='en'>Git repository up on GitHub. So I&#39;m going to come 
+here, create new repository, I&#39;m going to call  
+<SYNC Start=1730510><P class='en'>&nbsp;
+<SYNC Start=1730510><P class='en'>this demo repo to don&#39;t need a description, going 
+to leave all this here. Now I have another empty  
+<SYNC Start=1739180><P class='en'>&nbsp;
+<SYNC Start=1739180><P class='en'>repository. So to start pushing here, I&#39;m going 
+to copy this and say Git remote, now remote mean  
+<SYNC Start=1747100><P class='en'>&nbsp;
+<SYNC Start=1747100><P class='en'>somewhere else, but not on this computer. We&#39;re 
+going to use this to add a reference to the remote  
+<SYNC Start=1752770><P class='en'>&nbsp;
+<SYNC Start=1752770><P class='en'>repository on GitHub. And then I&#39;m going to say 
+add origin and paste that link that I copied. And  
+<SYNC Start=1761020><P class='en'>&nbsp;
+<SYNC Start=1761020><P class='en'>I can check that by saying Git remote dash V, 
+and it shows any remote repositories that I&#39;ve  
+<SYNC Start=1769660><P class='en'>&nbsp;
+<SYNC Start=1769660><P class='en'>connected to this repo. Now that these are set up. 
+I can now use git push origin, Master just as I  
+<SYNC Start=1779380><P class='en'>&nbsp;
+<SYNC Start=1779380><P class='en'>did before. Now, there&#39;s a shortcut here, because 
+if I don&#39;t want to type out this whole thing,  
+<SYNC Start=1784150><P class='en'>&nbsp;
+<SYNC Start=1784150><P class='en'>every time in the future, I can just use git push, 
+but I have to set something called an upstream,  
+<SYNC Start=1790180><P class='en'>&nbsp;
+<SYNC Start=1790180><P class='en'>meaning this is where I want to push it to 
+by default. So I&#39;m going to do dash u for set  
+<SYNC Start=1797060><P class='en'>&nbsp;
+<SYNC Start=1797060><P class='en'>upstream and then enter In the future, I can just 
+use git push without typing out origin Master,  
+<SYNC Start=1804980><P class='en'>&nbsp;
+<SYNC Start=1804980><P class='en'>it says to GitHub looks like everything was 
+pushed just fine, I will refresh this page,  
+<SYNC Start=1811220><P class='en'>&nbsp;
+<SYNC Start=1811220><P class='en'>and I can see the readme that I just added. So 
+that&#39;s how you initialize a repository locally and  
+<SYNC Start=1818390><P class='en'>&nbsp;
+<SYNC Start=1818390><P class='en'>push it to a remote location like GitHub. So let&#39;s 
+review the workflows that we&#39;ve gone over so far,  
+<SYNC Start=1825440><P class='en'>&nbsp;
+<SYNC Start=1825440><P class='en'>and compare the flow of adding code in the 
+GitHub interface versus writing it locally.  
+<SYNC Start=1834200><P class='en'>&nbsp;
+<SYNC Start=1834200><P class='en'>So when we first started working in the GitHub 
+interface, we wrote some code in the readme,  
+<SYNC Start=1840230><P class='en'>&nbsp;
+<SYNC Start=1840230><P class='en'>and then we committed our changes we saved them 
+to get now notice, there wasn&#39;t an added step  
+<SYNC Start=1846560><P class='en'>&nbsp;
+<SYNC Start=1846560><P class='en'>here. And we never did a git add to stage changes. 
+Well, that&#39;s because GitHub handles that for us.  
+<SYNC Start=1852980><P class='en'>&nbsp;
+<SYNC Start=1852980><P class='en'>So really, by committing in GitHub, we are adding 
+and committing at the same time. And then that was  
+<SYNC Start=1859070><P class='en'>&nbsp;
+<SYNC Start=1859070><P class='en'>it really, because it was our repository, we 
+had full access to change whatever we wanted,  
+<SYNC Start=1865430><P class='en'>&nbsp;
+<SYNC Start=1865430><P class='en'>we could just update the code just by committing 
+it in the GitHub interface. Of course, we didn&#39;t  
+<SYNC Start=1871550><P class='en'>&nbsp;
+<SYNC Start=1871550><P class='en'>have to push the code because it was already live 
+on GitHub. There&#39;s no other remote repository,  
+<SYNC Start=1877520><P class='en'>&nbsp;
+<SYNC Start=1877520><P class='en'>because it&#39;s already in the remote repository. 
+Now, if we didn&#39;t own the repository, or we didn&#39;t  
+<SYNC Start=1883760><P class='en'>&nbsp;
+<SYNC Start=1883760><P class='en'>have access rights, or we needed other people 
+to review our code, before we merged it in with  
+<SYNC Start=1890600><P class='en'>&nbsp;
+<SYNC Start=1890600><P class='en'>all the rest of the code, then we would also have 
+to take the extra step of making a pull request,  
+<SYNC Start=1895670><P class='en'>&nbsp;
+<SYNC Start=1895670><P class='en'>which is something we&#39;re going to cover later 
+in this video. So let&#39;s compare this workflow  
+<SYNC Start=1901610><P class='en'>&nbsp;
+<SYNC Start=1901610><P class='en'>if we&#39;re just writing code on GitHub, versus doing 
+it locally, and then pushing it up to GitHub. So  
+<SYNC Start=1908390><P class='en'>&nbsp;
+<SYNC Start=1908390><P class='en'>luckily, in our text editor, we wrote the code. 
+And then we had to do git add to let get know  
+<SYNC Start=1914780><P class='en'>&nbsp;
+<SYNC Start=1914780><P class='en'>about the changes. And then we saved them to get 
+using the git commit command. And then we push  
+<SYNC Start=1921530><P class='en'>&nbsp;
+<SYNC Start=1921530><P class='en'>them to the remote repository on GitHub, using the 
+git push command, and that updated GitHub source  
+<SYNC Start=1929240><P class='en'>&nbsp;
+<SYNC Start=1929240><P class='en'>code or the code in the GitHub repository with our 
+changes that were made locally. And then just like  
+<SYNC Start=1935960><P class='en'>&nbsp;
+<SYNC Start=1935960><P class='en'>before, if we didn&#39;t have access rights, or we 
+needed a code review, before we merge changes in,  
+<SYNC Start=1942110><P class='en'>&nbsp;
+<SYNC Start=1942110><P class='en'>we&#39;ll need to make a pull request. So these two 
+methods cover the most basic ways to use Git,  
+<SYNC Start=1948890><P class='en'>&nbsp;
+<SYNC Start=1948890><P class='en'>by using the GitHub web interface and then doing 
+it locally. If you have any questions about this,  
+<SYNC Start=1956030><P class='en'>&nbsp;
+<SYNC Start=1956030><P class='en'>then please leave them in the comments below. 
+Otherwise, let&#39;s move on to Git branching.  
+<SYNC Start=1962120><P class='en'>&nbsp;
+<SYNC Start=1965240><P class='en'>Let&#39;s first go over some of the concepts 
+of branching, and then we&#39;ll dive into a  
+<SYNC Start=1970970><P class='en'>&nbsp;
+<SYNC Start=1970970><P class='en'>practical example. Now, what is Git branching? 
+You seen in our examples that we&#39;re on something  
+<SYNC Start=1977900><P class='en'>&nbsp;
+<SYNC Start=1977900><P class='en'>called the master branch. Now master is a naming 
+convention for the main or the default branch in  
+<SYNC Start=1985550><P class='en'>&nbsp;
+<SYNC Start=1985550><P class='en'>a repository. So if you&#39;re just working off of one 
+branch, that&#39;s where your code will live, and all  
+<SYNC Start=1992630><P class='en'>&nbsp;
+<SYNC Start=1992630><P class='en'>your code, all your commits, everything will be 
+in that one branch. Now, this is called branching,  
+<SYNC Start=1999410><P class='en'>&nbsp;
+<SYNC Start=1999410><P class='en'>because it starts to look more like a tree when 
+you have multiple branches. So we saw earlier  
+<SYNC Start=2005620><P class='en'>&nbsp;
+<SYNC Start=2005620><P class='en'>that we had a master branch, we were committing 
+to that master branch. But we could also make  
+<SYNC Start=2011080><P class='en'>&nbsp;
+<SYNC Start=2011080><P class='en'>another branch. We&#39;ll call it feature branch. So 
+let&#39;s talk about what happens when we create a  
+<SYNC Start=2017260><P class='en'>&nbsp;
+<SYNC Start=2017260><P class='en'>new branch. At first, the code on master and this 
+new feature branch will be exactly the same. But  
+<SYNC Start=2025870><P class='en'>&nbsp;
+<SYNC Start=2025870><P class='en'>as you make updates to the feature branch, those 
+changes are only seen in the feature branch. So if  
+<SYNC Start=2035020><P class='en'>&nbsp;
+<SYNC Start=2035020><P class='en'>you make changes on the feature branch, you make 
+a commit to save those changes on to that branch.  
+<SYNC Start=2041080><P class='en'>&nbsp;
+<SYNC Start=2041080><P class='en'>And then you switch back to the master branch, you 
+won&#39;t be able to see any of the changes that you  
+<SYNC Start=2047530><P class='en'>&nbsp;
+<SYNC Start=2047530><P class='en'>made on that feature branch. Each individual 
+branch has no way of knowing what commits or  
+<SYNC Start=2054760><P class='en'>&nbsp;
+<SYNC Start=2054760><P class='en'>what changes have been made to any other branch. 
+Each branch is only keeping track of what changes  
+<SYNC Start=2061030><P class='en'>&nbsp;
+<SYNC Start=2061030><P class='en'>are made on its own branch. Now you can continue 
+to change the code on master branch and save it  
+<SYNC Start=2068080><P class='en'>&nbsp;
+<SYNC Start=2068080><P class='en'>through a commit to the master branch. And then if 
+you switch back to the feature branch, likewise,  
+<SYNC Start=2074110><P class='en'>&nbsp;
+<SYNC Start=2074110><P class='en'>you will not be able to see the changes that you 
+just saved to master. Why is this useful? It&#39;s  
+<SYNC Start=2080110><P class='en'>&nbsp;
+<SYNC Start=2080110><P class='en'>extremely useful because you will be building out 
+new features to applications that may break your  
+<SYNC Start=2087460><P class='en'>&nbsp;
+<SYNC Start=2087460><P class='en'>code or they are not finished yet. And you don&#39;t 
+want to save them to the main master branch. You  
+<SYNC Start=2094840><P class='en'>&nbsp;
+<SYNC Start=2094840><P class='en'>want to work on them in kind of a sandbox area. So 
+you can write all the code unit And get it correct  
+<SYNC Start=2101260><P class='en'>&nbsp;
+<SYNC Start=2101260><P class='en'>and in the state that you want, before you merge 
+it back into the main branch of the code base.  
+<SYNC Start=2107740><P class='en'>&nbsp;
+<SYNC Start=2107740><P class='en'>And this is really helpful when you have many 
+different people working in the same repository,  
+<SYNC Start=2114520><P class='en'>&nbsp;
+<SYNC Start=2114520><P class='en'>or a lot of different branches going on at 
+once. One very common thing that you&#39;ll see  
+<SYNC Start=2119680><P class='en'>&nbsp;
+<SYNC Start=2119680><P class='en'>in development is that you&#39;ll be working on let&#39;s 
+say, this feature branch for a week or more, and  
+<SYNC Start=2126010><P class='en'>&nbsp;
+<SYNC Start=2126010><P class='en'>you have all of these changes that you&#39;ve made. 
+And then you find out there&#39;s this major bug that  
+<SYNC Start=2132100><P class='en'>&nbsp;
+<SYNC Start=2132100><P class='en'>you have to fix real quick. So for that, we make 
+this other branch called a hotfix branch here,  
+<SYNC Start=2139330><P class='en'>&nbsp;
+<SYNC Start=2139330><P class='en'>represented by yellow. And you can see that I made 
+the change in one commit to fix whatever bug was  
+<SYNC Start=2147010><P class='en'>&nbsp;
+<SYNC Start=2147010><P class='en'>wrong with the code on its own branch, I made sure 
+it was working correctly. And then I merged it  
+<SYNC Start=2153250><P class='en'>&nbsp;
+<SYNC Start=2153250><P class='en'>back into the master branch. Now that we&#39;ve gone 
+over the concepts of branching, let&#39;s dive into  
+<SYNC Start=2159670><P class='en'>&nbsp;
+<SYNC Start=2159670><P class='en'>the command line and try it out. And now I&#39;m using 
+a full screen terminal just so I have more space  
+<SYNC Start=2165730><P class='en'>&nbsp;
+<SYNC Start=2165730><P class='en'>as I&#39;m running different Git commands that are 
+going to take up more screen space to show you,  
+<SYNC Start=2171430><P class='en'>&nbsp;
+<SYNC Start=2171430><P class='en'>but it works the exact same way as the terminal 
+inside of VS code. So I&#39;m back in my terminal  
+<SYNC Start=2178690><P class='en'>&nbsp;
+<SYNC Start=2178690><P class='en'>inside of my demo repo again. And you can see here 
+I have information about my git branch. Again,  
+<SYNC Start=2186370><P class='en'>&nbsp;
+<SYNC Start=2186370><P class='en'>you might see this presented in different ways 
+it shows you&#39;re on the master branch. If I type  
+<SYNC Start=2191860><P class='en'>&nbsp;
+<SYNC Start=2191860><P class='en'>in git branch, you can see that I currently only 
+have one branch and its master. And you can also  
+<SYNC Start=2199510><P class='en'>&nbsp;
+<SYNC Start=2199510><P class='en'>see there&#39;s a star beside it. And that means that 
+I am currently on that branch. So I&#39;m going to hit  
+<SYNC Start=2206350><P class='en'>&nbsp;
+<SYNC Start=2206350><P class='en'>the letter Q here to get out of that. And now I&#39;m 
+going to create a new branch. So I do that with  
+<SYNC Start=2212560><P class='en'>&nbsp;
+<SYNC Start=2212560><P class='en'>git checkout. And git checkout is what you will 
+use to switch between branches. But to tell it  
+<SYNC Start=2220510><P class='en'>&nbsp;
+<SYNC Start=2220510><P class='en'>to create a new branch, use dash B, and then you 
+give it the name of your branch. So in this case,  
+<SYNC Start=2228340><P class='en'>&nbsp;
+<SYNC Start=2228340><P class='en'>I&#39;m going to call it feature. Now if you&#39;re 
+working in real application with people, you want  
+<SYNC Start=2235540><P class='en'>&nbsp;
+<SYNC Start=2235540><P class='en'>to make this name as descriptive as possible. Some 
+people like to use feature slash the ticket number  
+<SYNC Start=2242320><P class='en'>&nbsp;
+<SYNC Start=2242320><P class='en'>or description, or you can use hyphen. And then 
+you could give it the issue number, like if it&#39;s  
+<SYNC Start=2248140><P class='en'>&nbsp;
+<SYNC Start=2248140><P class='en'>a GitHub issue number 11, or whatever convention 
+you want to use. And then you can make this longer  
+<SYNC Start=2254920><P class='en'>&nbsp;
+<SYNC Start=2254920><P class='en'>if you want and put some more details. I&#39;m going 
+to call this feature dash README instructions,  
+<SYNC Start=2262630><P class='en'>&nbsp;
+<SYNC Start=2262630><P class='en'>because I&#39;m just going to be updating a section 
+of the readme. Click enter. And now it says I  
+<SYNC Start=2269920><P class='en'>&nbsp;
+<SYNC Start=2269920><P class='en'>switched to a new branch, meaning I created this 
+new branch called feature README instructions. And  
+<SYNC Start=2275590><P class='en'>&nbsp;
+<SYNC Start=2275590><P class='en'>now you see that my branch changed. So now if I 
+do git branch, again, I have two branches listed  
+<SYNC Start=2283300><P class='en'>&nbsp;
+<SYNC Start=2283300><P class='en'>here, and the top one is starred and highlighted. 
+So it shows me which branch I&#39;m currently on,  
+<SYNC Start=2288520><P class='en'>&nbsp;
+<SYNC Start=2288520><P class='en'>I&#39;m going to hit Q. And like I mentioned, git 
+checkout, will switch between branches. So now  
+<SYNC Start=2296620><P class='en'>&nbsp;
+<SYNC Start=2296620><P class='en'>that I am on this feature reading instructions, I 
+can check out master. And now you see I switch to  
+<SYNC Start=2303400><P class='en'>&nbsp;
+<SYNC Start=2303400><P class='en'>master. I&#39;ll do git branch shows them on master 
+now. And I will do another git checkout feature,  
+<SYNC Start=2312070><P class='en'>&nbsp;
+<SYNC Start=2312070><P class='en'>README instructions, you see that I hit the tab 
+button, and it autofill the rest of the branch.  
+<SYNC Start=2319090><P class='en'>&nbsp;
+<SYNC Start=2319090><P class='en'>So I didn&#39;t have to type out the whole long name, 
+you can also hit tab. Even if you don&#39;t start at  
+<SYNC Start=2327400><P class='en'>&nbsp;
+<SYNC Start=2327400><P class='en'>the beginning, like in this case, I started 
+typing feature and then hit tab. But I could  
+<SYNC Start=2331810><P class='en'>&nbsp;
+<SYNC Start=2331810><P class='en'>actually start typing instructions and hit tab 
+and it&#39;s still autocompletes. Now this is very  
+<SYNC Start=2338440><P class='en'>&nbsp;
+<SYNC Start=2338440><P class='en'>useful. Because eventually, when you work in 
+a repo, you&#39;re going to start a lot of stuff  
+<SYNC Start=2344170><P class='en'>&nbsp;
+<SYNC Start=2344170><P class='en'>with feature or with bug or hotfix or whatever. 
+So only your last few words will be unique. So  
+<SYNC Start=2351370><P class='en'>&nbsp;
+<SYNC Start=2351370><P class='en'>that&#39;s just something useful to know. So now I&#39;m 
+back on the feature README instructions branch,  
+<SYNC Start=2356290><P class='en'>&nbsp;
+<SYNC Start=2356290><P class='en'>and I&#39;m going to make some changes on this branch. 
+So I&#39;m in my code here, I&#39;m going to come into my  
+<SYNC Start=2361570><P class='en'>&nbsp;
+<SYNC Start=2361570><P class='en'>README and make a new section. I&#39;m going to say 
+just local development or something and then  
+<SYNC Start=2370960><P class='en'>&nbsp;
+<SYNC Start=2370960><P class='en'>give it one step other than say open index dot 
+HTML in your browser, just as a demo. Alright,  
+<SYNC Start=2380860><P class='en'>&nbsp;
+<SYNC Start=2380860><P class='en'>I save that. And you can see in VS code, it gives 
+me this m here meaning it&#39;s been modified. since  
+<SYNC Start=2387250><P class='en'>&nbsp;
+<SYNC Start=2387250><P class='en'>I&#39;ve last checked this into get. That&#39;s kind of 
+a nice feature to have to see which files you&#39;ve  
+<SYNC Start=2393610><P class='en'>&nbsp;
+<SYNC Start=2393610><P class='en'>added and which files you&#39;ve modified right in 
+your text editor. Alright, now that I&#39;ve modified  
+<SYNC Start=2399400><P class='en'>&nbsp;
+<SYNC Start=2399400><P class='en'>some files, Here, I&#39;m going to do the git status 
+command again. And it says I modified README. So  
+<SYNC Start=2407860><P class='en'>&nbsp;
+<SYNC Start=2407860><P class='en'>first, I&#39;m going to save things that have changed 
+on this branch. So I&#39;m going to do the git add  
+<SYNC Start=2414370><P class='en'>&nbsp;
+<SYNC Start=2414370><P class='en'>command. And I&#39;m just going to stage the readme 
+changes. And now I will do a git commit, dash m,  
+<SYNC Start=2423340><P class='en'>&nbsp;
+<SYNC Start=2423340><P class='en'>and say, A, oops, I have to put that in quotes. So 
+updated. README. Okay, so you can see I have one  
+<SYNC Start=2431320><P class='en'>&nbsp;
+<SYNC Start=2431320><P class='en'>file changed for insertions. So now it&#39;s saved 
+to get, but it&#39;s only saved on this feature,  
+<SYNC Start=2436990><P class='en'>&nbsp;
+<SYNC Start=2436990><P class='en'>README instructions branch. So if I do a git 
+checkout Master, come back to my code. And you can  
+<SYNC Start=2443740><P class='en'>&nbsp;
+<SYNC Start=2443740><P class='en'>see the changes aren&#39;t here, because they&#39;re only 
+on that other branch. Now, if I want to here, I  
+<SYNC Start=2450670><P class='en'>&nbsp;
+<SYNC Start=2450670><P class='en'>can go ahead and merge these two branches locally, 
+using the Git merge command. But before I do that,  
+<SYNC Start=2459070><P class='en'>&nbsp;
+<SYNC Start=2459070><P class='en'>I just want to double check and see the code that 
+emerging in which I can do through the git diff  
+<SYNC Start=2465610><P class='en'>&nbsp;
+<SYNC Start=2465610><P class='en'>command. Now, diff, or diffing, shows me what 
+changes have been made, it compares two versions  
+<SYNC Start=2473920><P class='en'>&nbsp;
+<SYNC Start=2473920><P class='en'>of the code and shows me all of the lines that 
+have been changed. And you kind of saw this in  
+<SYNC Start=2479110><P class='en'>&nbsp;
+<SYNC Start=2479110><P class='en'>the Git interface, because you saw a nice visual 
+representation of the diff, where it showed in  
+<SYNC Start=2485260><P class='en'>&nbsp;
+<SYNC Start=2485260><P class='en'>green with a plus sign the lines that had been 
+added, and then in red with the minus sign the  
+<SYNC Start=2490960><P class='en'>&nbsp;
+<SYNC Start=2490960><P class='en'>lines that had been removed. And let me say git 
+diff, and the name of the branch, hit Enter.  
+<SYNC Start=2498670><P class='en'>&nbsp;
+<SYNC Start=2498670><P class='en'>And now you can see, it shows which file it&#39;s 
+talking about this readme.md file. And in white,  
+<SYNC Start=2507790><P class='en'>&nbsp;
+<SYNC Start=2507790><P class='en'>it shows text that was already been there, that 
+hasn&#39;t been changed. And then it shows that my  
+<SYNC Start=2513070><P class='en'>&nbsp;
+<SYNC Start=2513070><P class='en'>master branch doesn&#39;t have some of the changes 
+that are in my other branch. So I&#39;m going to hit  
+<SYNC Start=2519730><P class='en'>&nbsp;
+<SYNC Start=2519730><P class='en'>q here to get out of this. Alright, now I could go 
+ahead and like I said, use the Git merge command,  
+<SYNC Start=2526420><P class='en'>&nbsp;
+<SYNC Start=2526420><P class='en'>passed in the branch, and it&#39;ll merge in those 
+changes. But the more common pattern that you  
+<SYNC Start=2533200><P class='en'>&nbsp;
+<SYNC Start=2533200><P class='en'>are going to see is pushing these changes on that 
+branch up to GitHub, and then making a PR, so I&#39;m  
+<SYNC Start=2541480><P class='en'>&nbsp;
+<SYNC Start=2541480><P class='en'>going to change back to the feature branch, and 
+now do git status. And it says I have no changes  
+<SYNC Start=2548590><P class='en'>&nbsp;
+<SYNC Start=2548590><P class='en'>to commit, because they&#39;ve already been committed. 
+But I do need to push them up to GitHub. So let me  
+<SYNC Start=2555610><P class='en'>&nbsp;
+<SYNC Start=2555610><P class='en'>run git push. And now you can see, since I&#39;m on a 
+new branch, it says that I need to tell it which  
+<SYNC Start=2564040><P class='en'>&nbsp;
+<SYNC Start=2564040><P class='en'>branch on GitHub I want to push to. Now the answer 
+is almost always that the branch will be named the  
+<SYNC Start=2570910><P class='en'>&nbsp;
+<SYNC Start=2570910><P class='en'>same thing on GitHub, and on your local machine. 
+So I could copy this line. And now you&#39;ll notice  
+<SYNC Start=2578080><P class='en'>&nbsp;
+<SYNC Start=2578080><P class='en'>this set upstream flag here is the same thing 
+that we were doing before with the dash U. It&#39;s  
+<SYNC Start=2588220><P class='en'>&nbsp;
+<SYNC Start=2588220><P class='en'>just shorthand for set upstream. So I&#39;m going to 
+hit enter here. And now it&#39;s pushed up to GitHub.  
+<SYNC Start=2595210><P class='en'>&nbsp;
+<SYNC Start=2595210><P class='en'>And it&#39;s even giving me a hint for how to create 
+a pull request on GitHub, by giving me these  
+<SYNC Start=2602620><P class='en'>&nbsp;
+<SYNC Start=2602620><P class='en'>instructions here. So what is a pull request or 
+a PR, it&#39;s basically a request to have your code  
+<SYNC Start=2611560><P class='en'>&nbsp;
+<SYNC Start=2611560><P class='en'>pulled into another branch. In the example we&#39;re 
+using today, we have a feature branch, and we want  
+<SYNC Start=2618700><P class='en'>&nbsp;
+<SYNC Start=2618700><P class='en'>to have our code pulled into the master branch. So 
+we make a PR from the feature branch to the master  
+<SYNC Start=2625780><P class='en'>&nbsp;
+<SYNC Start=2625780><P class='en'>branch. Now once we have made a PR, anyone can 
+review our code, comment on it, ask us to make  
+<SYNC Start=2634600><P class='en'>&nbsp;
+<SYNC Start=2634600><P class='en'>changes or updates. Now, after you make a PR, you 
+can also update the code just by making additional  
+<SYNC Start=2641380><P class='en'>&nbsp;
+<SYNC Start=2641380><P class='en'>commits and pushing them up to GitHub, as long as 
+it&#39;s on the same branch that you&#39;re making the PR  
+<SYNC Start=2647140><P class='en'>&nbsp;
+<SYNC Start=2647140><P class='en'>with. Once the PR is merged, you&#39;ll generally 
+delete your feature or source branch. And to  
+<SYNC Start=2654100><P class='en'>&nbsp;
+<SYNC Start=2654100><P class='en'>switch back to the master branch. Then when 
+you want to make additional coding changes,  
+<SYNC Start=2658870><P class='en'>&nbsp;
+<SYNC Start=2658870><P class='en'>you will create another new branch and start the 
+process over make your commits, make a PR and then  
+<SYNC Start=2666550><P class='en'>&nbsp;
+<SYNC Start=2666550><P class='en'>merge again. And I could go straight to this URL, 
+but I&#39;m going to show you how to do it manually on  
+<SYNC Start=2673840><P class='en'>&nbsp;
+<SYNC Start=2673840><P class='en'>GitHub first. So I look at my GitHub interface. 
+And you can see already GitHub picked up on the  
+<SYNC Start=2681610><P class='en'>&nbsp;
+<SYNC Start=2681610><P class='en'>fact that I just pushed a new branch. So now it&#39;s 
+asking me right here if I want to compare this  
+<SYNC Start=2688780><P class='en'>&nbsp;
+<SYNC Start=2688780><P class='en'>new branch to another branch and create a pull 
+request, and it takes me to this screen here.  
+<SYNC Start=2694300><P class='en'>&nbsp;
+<SYNC Start=2694300><P class='en'>Now sometimes this is confusing for people which 
+branch is being merged into which branch This  
+<SYNC Start=2700750><P class='en'>&nbsp;
+<SYNC Start=2700750><P class='en'>GitHub interface does a pretty good job because 
+of the arrow. So you can see that the branch  
+<SYNC Start=2705730><P class='en'>&nbsp;
+<SYNC Start=2705730><P class='en'>you&#39;re comparing this feature, README instructions 
+will be merged into the base. So there&#39;s always a  
+<SYNC Start=2711730><P class='en'>&nbsp;
+<SYNC Start=2711730><P class='en'>base branch where all the code is going to get 
+merged into. And then there&#39;s the branch you&#39;re  
+<SYNC Start=2716350><P class='en'>&nbsp;
+<SYNC Start=2716350><P class='en'>comparing. So now I have this message, I have 
+a title, it says updated README. And I can put  
+<SYNC Start=2721930><P class='en'>&nbsp;
+<SYNC Start=2721930><P class='en'>some more description here. So usually, I&#39;m going 
+to put a list of the changes that I&#39;ve made and  
+<SYNC Start=2728560><P class='en'>&nbsp;
+<SYNC Start=2728560><P class='en'>maybe some description as to why I made certain 
+decisions. So here, I&#39;m just going to say added  
+<SYNC Start=2735130><P class='en'>&nbsp;
+<SYNC Start=2735130><P class='en'>section about local development to the readme, 
+and I will create a pull request. Now that I&#39;ve  
+<SYNC Start=2745960><P class='en'>&nbsp;
+<SYNC Start=2745960><P class='en'>created a pull request, I can actually come here 
+in the interface, I can see any comments that  
+<SYNC Start=2752560><P class='en'>&nbsp;
+<SYNC Start=2752560><P class='en'>people have made on the pull request, or I can 
+write more comments of my own, I can look through  
+<SYNC Start=2759850><P class='en'>&nbsp;
+<SYNC Start=2759850><P class='en'>all the commits I&#39;ve made that I&#39;m trying to merge 
+into master right now. And I can also look at all  
+<SYNC Start=2767860><P class='en'>&nbsp;
+<SYNC Start=2767860><P class='en'>the files that have been changed, and see the diff 
+of what&#39;s been added, removed or updated. Another  
+<SYNC Start=2774970><P class='en'>&nbsp;
+<SYNC Start=2774970><P class='en'>thing I can do right here is if I want to make a 
+comment about a particular line of code that I&#39;ve  
+<SYNC Start=2780850><P class='en'>&nbsp;
+<SYNC Start=2780850><P class='en'>written, I can press the plus button, this blue 
+plus button. And now I can make a comment there,  
+<SYNC Start=2788710><P class='en'>&nbsp;
+<SYNC Start=2788710><P class='en'>I&#39;m just going to say, add a new sub header and 
+add it as a single comment. And you can see that  
+<SYNC Start=2795400><P class='en'>&nbsp;
+<SYNC Start=2795400><P class='en'>the comment appears at the line of code where you 
+hit the plus button. This is a really nice way if  
+<SYNC Start=2800980><P class='en'>&nbsp;
+<SYNC Start=2800980><P class='en'>there are multiple people working on a repository 
+to make comments about specific lines of code. And  
+<SYNC Start=2807370><P class='en'>&nbsp;
+<SYNC Start=2807370><P class='en'>then usually the person who created this PR will 
+reply to them with an explanation or make another  
+<SYNC Start=2815230><P class='en'>&nbsp;
+<SYNC Start=2815230><P class='en'>commit, if changes need to be made to the code 
+or something. Alright, so I&#39;m going to go ahead  
+<SYNC Start=2821200><P class='en'>&nbsp;
+<SYNC Start=2821200><P class='en'>and merge this PR. And you&#39;ll notice that I added 
+the single comment, it says resolve. Now because  
+<SYNC Start=2828940><P class='en'>&nbsp;
+<SYNC Start=2828940><P class='en'>I&#39;m the owner, here I have full permissions, I 
+don&#39;t have to resolve I can still merge the PR,  
+<SYNC Start=2833710><P class='en'>&nbsp;
+<SYNC Start=2833710><P class='en'>if you don&#39;t have permissions or your repo set up 
+in a certain way, then you might have to resolve  
+<SYNC Start=2840310><P class='en'>&nbsp;
+<SYNC Start=2840310><P class='en'>comments before you can merge. Anyway, I&#39;m just 
+going to merge here, confirm and merge successful.  
+<SYNC Start=2847510><P class='en'>&nbsp;
+<SYNC Start=2848910><P class='en'>Now that the PR is merged, I&#39;m going to go over 
+to the code. And if I scroll down, you can see  
+<SYNC Start=2856920><P class='en'>&nbsp;
+<SYNC Start=2856920><P class='en'>that I am on the master branch. And my changes 
+are also here. So the branch was successfully  
+<SYNC Start=2864300><P class='en'>&nbsp;
+<SYNC Start=2864300><P class='en'>merged. So locally, now I&#39;m going to switch to 
+the master branch. And if you look at the code,  
+<SYNC Start=2870960><P class='en'>&nbsp;
+<SYNC Start=2870960><P class='en'>the changes aren&#39;t there yet. And that&#39;s because 
+they are only on GitHub, and I need to pull them  
+<SYNC Start=2877350><P class='en'>&nbsp;
+<SYNC Start=2877350><P class='en'>down to my local environment. So to get the 
+changes on my local master branch from origin,  
+<SYNC Start=2884790><P class='en'>&nbsp;
+<SYNC Start=2884790><P class='en'>I&#39;m going to do Git pull. Now, if I didn&#39;t already 
+set the upstream, I would have to do Git pull  
+<SYNC Start=2891180><P class='en'>&nbsp;
+<SYNC Start=2891180><P class='en'>origin master. But I already have an upstream 
+set here. So I&#39;m just going to do Git pull,  
+<SYNC Start=2897330><P class='en'>&nbsp;
+<SYNC Start=2897330><P class='en'>and then enter. And you can see one file changed 
+for insertions. And now if I look at my code,  
+<SYNC Start=2905250><P class='en'>&nbsp;
+<SYNC Start=2905250><P class='en'>I can see my local master has also been updated 
+with the changes from the branch. And now that I  
+<SYNC Start=2911850><P class='en'>&nbsp;
+<SYNC Start=2911850><P class='en'>am done with that feature branch, I&#39;m going to do 
+git branch. And it&#39;s still there, even though I&#39;m  
+<SYNC Start=2919350><P class='en'>&nbsp;
+<SYNC Start=2919350><P class='en'>not going to be using it again, because you don&#39;t 
+really reuse branches that you&#39;ve already merged  
+<SYNC Start=2924840><P class='en'>&nbsp;
+<SYNC Start=2924840><P class='en'>into your master branch. So I&#39;m going to go ahead 
+and delete this branch. So I&#39;m going to do git  
+<SYNC Start=2931680><P class='en'>&nbsp;
+<SYNC Start=2931680><P class='en'>branch, dash D, and then the name of the branch. 
+And again, I can tab over. So I&#39;ll hit Enter. And  
+<SYNC Start=2939990><P class='en'>&nbsp;
+<SYNC Start=2939990><P class='en'>now it says I deleted that branch. So now if 
+I do git branch, and I only have master again,  
+<SYNC Start=2946350><P class='en'>&nbsp;
+<SYNC Start=2946350><P class='en'>alright, well, that&#39;s all fine and great and works 
+well. But in real life, you&#39;re not always going to  
+<SYNC Start=2952770><P class='en'>&nbsp;
+<SYNC Start=2952770><P class='en'>have such an easy time merging. There&#39;s something 
+called merge conflicts in git, where basically,  
+<SYNC Start=2960000><P class='en'>&nbsp;
+<SYNC Start=2960000><P class='en'>you&#39;re building your own code writing a bunch of 
+code on your own branch. Maybe other people are  
+<SYNC Start=2966030><P class='en'>&nbsp;
+<SYNC Start=2966030><P class='en'>writing code on their branches. And master is 
+getting updated from multiple different places.  
+<SYNC Start=2971160><P class='en'>&nbsp;
+<SYNC Start=2971160><P class='en'>So it&#39;s possible for multiple people to change 
+the same files. And so sometimes Git doesn&#39;t  
+<SYNC Start=2978930><P class='en'>&nbsp;
+<SYNC Start=2978930><P class='en'>know which code you want to keep, or which code is 
+redundant, or which code you want to get rid of.  
+<SYNC Start=2984590><P class='en'>&nbsp;
+<SYNC Start=2984590><P class='en'>So you&#39;ll have to manually do that. Let&#39;s try that 
+out. Let me create another branch. I&#39;m going to do  
+<SYNC Start=2992030><P class='en'>&nbsp;
+<SYNC Start=2992030><P class='en'>git checkout dash B. And then I&#39;m just going to 
+call this quick test. Alright, I&#39;m on the quick  
+<SYNC Start=2998900><P class='en'>&nbsp;
+<SYNC Start=2998900><P class='en'>test branch. Now I&#39;m going to come into index dot 
+HTML. And I&#39;m going to add a p tag here, and say  
+<SYNC Start=3008500><P class='en'>&nbsp;
+<SYNC Start=3008500><P class='en'>world. And P. Alright, so I modified this file, 
+let me go ahead and do git status, it&#39;s always  
+<SYNC Start=3019060><P class='en'>&nbsp;
+<SYNC Start=3019060><P class='en'>a good idea to do git status before you commit 
+anything looks good. What I can also do from here  
+<SYNC Start=3024940><P class='en'>&nbsp;
+<SYNC Start=3024940><P class='en'>is do a git diff, enter, and it shows me all of 
+the changes that I&#39;ve made since my last commit.  
+<SYNC Start=3032800><P class='en'>&nbsp;
+<SYNC Start=3032800><P class='en'>So I&#39;m going to hit Q, and now I will commit 
+these. Now generally, the workflow has been git  
+<SYNC Start=3041410><P class='en'>&nbsp;
+<SYNC Start=3041410><P class='en'>add, and then file name or period dad, everything 
+in this directory. This time, there&#39;s a shortcut,  
+<SYNC Start=3048280><P class='en'>&nbsp;
+<SYNC Start=3048280><P class='en'>because we&#39;ve just modified one file. And the file 
+has already been committed to get in the past,  
+<SYNC Start=3055480><P class='en'>&nbsp;
+<SYNC Start=3055480><P class='en'>which is why it says modified and not created. 
+So what I&#39;m going to do is git commit. And then  
+<SYNC Start=3062050><P class='en'>&nbsp;
+<SYNC Start=3062050><P class='en'>instead of dash m, I&#39;m going to do dash A, which 
+stands for ad and M at the same time for message,  
+<SYNC Start=3069610><P class='en'>&nbsp;
+<SYNC Start=3069610><P class='en'>then I&#39;m going to put my commit message. So this 
+basically adds and commits at the same time. But  
+<SYNC Start=3075850><P class='en'>&nbsp;
+<SYNC Start=3075850><P class='en'>it only works for modified files, not for newly 
+created files. Because if it&#39;s newly created,  
+<SYNC Start=3082600><P class='en'>&nbsp;
+<SYNC Start=3082600><P class='en'>you have to stage that with Git and let get know 
+about it first. For my message, I&#39;ll just say  
+<SYNC Start=3088510><P class='en'>&nbsp;
+<SYNC Start=3088510><P class='en'>added world. Okay, and now I have one file changed 
+to insertions. Now let me go to my master branch  
+<SYNC Start=3097630><P class='en'>&nbsp;
+<SYNC Start=3097630><P class='en'>git checkout Master, you can see I don&#39;t have the 
+changes from my other branch there. But what if I  
+<SYNC Start=3104260><P class='en'>&nbsp;
+<SYNC Start=3104260><P class='en'>updated the same line, so on Master, now I&#39;m 
+updating line two. And here I&#39;m going to put  
+<SYNC Start=3110080><P class='en'>&nbsp;
+<SYNC Start=3110080><P class='en'>there so hello there. So now master has aligned to 
+but the new branch I created also has aligned to  
+<SYNC Start=3117520><P class='en'>&nbsp;
+<SYNC Start=3117520><P class='en'>now everything is fine. Now because both branches 
+are separate. But what if I try to merge these two  
+<SYNC Start=3122800><P class='en'>&nbsp;
+<SYNC Start=3122800><P class='en'>together, whose line two is going to be put there. 
+So let&#39;s try that. I&#39;m going to go to my quick  
+<SYNC Start=3131620><P class='en'>&nbsp;
+<SYNC Start=3131620><P class='en'>test branch. So I&#39;m going to do git checkout. 
+quick test. And now it&#39;s actually giving me an  
+<SYNC Start=3139120><P class='en'>&nbsp;
+<SYNC Start=3139120><P class='en'>error and not letting me change branches. Because 
+I have local changes that line to that I added in  
+<SYNC Start=3146710><P class='en'>&nbsp;
+<SYNC Start=3146710><P class='en'>Master, it says it&#39;s going to be overwritten if 
+I change branches. So it&#39;s asking me to commit  
+<SYNC Start=3154090><P class='en'>&nbsp;
+<SYNC Start=3154090><P class='en'>before I change, so that way that line two will 
+be saved to get in the master branch, and won&#39;t  
+<SYNC Start=3161380><P class='en'>&nbsp;
+<SYNC Start=3161380><P class='en'>be lost when I change branches. Now stashing is 
+a little bit beyond the scope of this tutorial.  
+<SYNC Start=3166330><P class='en'>&nbsp;
+<SYNC Start=3166330><P class='en'>But it&#39;s basically a way for you to stash your 
+changes somewhere. And then you can retrieve  
+<SYNC Start=3173920><P class='en'>&nbsp;
+<SYNC Start=3173920><P class='en'>them later. But it&#39;s not making a commit to get. 
+It&#39;s like a temporary holding place. So we&#39;re not  
+<SYNC Start=3182050><P class='en'>&nbsp;
+<SYNC Start=3182050><P class='en'>going to do that, I&#39;m just going to go ahead and 
+commit. So let me do git status first. All right,  
+<SYNC Start=3188140><P class='en'>&nbsp;
+<SYNC Start=3188140><P class='en'>and I&#39;m going to use the shorthand because I only 
+have the modified file there. So I&#39;m going to do  
+<SYNC Start=3193060><P class='en'>&nbsp;
+<SYNC Start=3193060><P class='en'>git commit dash AM, and then a commit message, 
+I&#39;m going to say added there. And now I should  
+<SYNC Start=3202390><P class='en'>&nbsp;
+<SYNC Start=3202390><P class='en'>be able to check out and press the up arrow 
+key, I should be able to check out this quick  
+<SYNC Start=3207700><P class='en'>&nbsp;
+<SYNC Start=3207700><P class='en'>test branch. And before I merge master into 
+this branch, I&#39;m going to diff against master  
+<SYNC Start=3214690><P class='en'>&nbsp;
+<SYNC Start=3214690><P class='en'>real quick. And it shows me the changes here. So 
+now I&#39;m going to do merge, Master. So remember  
+<SYNC Start=3222670><P class='en'>&nbsp;
+<SYNC Start=3222670><P class='en'>how I said before that merging locally wasn&#39;t 
+the regular pattern. While it isn&#39;t for merging  
+<SYNC Start=3230410><P class='en'>&nbsp;
+<SYNC Start=3230410><P class='en'>branches into master. But Master gets updated as 
+you go along as you&#39;re working on your project,  
+<SYNC Start=3238330><P class='en'>&nbsp;
+<SYNC Start=3238330><P class='en'>because maybe other people are merging into master 
+and you don&#39;t have those changes in your branch.  
+<SYNC Start=3243730><P class='en'>&nbsp;
+<SYNC Start=3243730><P class='en'>But you don&#39;t want to get too far behind the 
+master as you&#39;re working because then it&#39;s  
+<SYNC Start=3248560><P class='en'>&nbsp;
+<SYNC Start=3248560><P class='en'>going to be really difficult to merge later. So 
+as changes are made to master in the GitHub repo,  
+<SYNC Start=3255400><P class='en'>&nbsp;
+<SYNC Start=3255400><P class='en'>you&#39;re going to want to pull those down to your 
+local master branch. And then whatever feature  
+<SYNC Start=3261310><P class='en'>&nbsp;
+<SYNC Start=3261310><P class='en'>branch you&#39;re working off of like quick test here, 
+you&#39;ll want to use Git merge master to keep your  
+<SYNC Start=3268360><P class='en'>&nbsp;
+<SYNC Start=3268360><P class='en'>branch up to date with what&#39;s going on in master. 
+So that&#39;s what we&#39;re doing here. Git merge Master,  
+<SYNC Start=3274720><P class='en'>&nbsp;
+<SYNC Start=3274720><P class='en'>hit Enter. And now it says we have a conflict. 
+So we have a merge conflict in index dot HTML. So  
+<SYNC Start=3283270><P class='en'>&nbsp;
+<SYNC Start=3283270><P class='en'>there are a couple of ways to fix merge conflicts. 
+interfaces like GitHub, give you an interface to  
+<SYNC Start=3289360><P class='en'>&nbsp;
+<SYNC Start=3289360><P class='en'>fix them. You can also fix it in the terminal. 
+But the easiest way to fix merge conflicts is  
+<SYNC Start=3296050><P class='en'>&nbsp;
+<SYNC Start=3296050><P class='en'>directly in your code. A nice code editor like vi 
+code will let you click buttons like accept the  
+<SYNC Start=3302830><P class='en'>&nbsp;
+<SYNC Start=3302830><P class='en'>current change or accept incoming or take both 
+of these. But you can also come in here, make  
+<SYNC Start=3308410><P class='en'>&nbsp;
+<SYNC Start=3308410><P class='en'>the changes that you want and delete these lines 
+that get added this, let&#39;s get know that there&#39;s  
+<SYNC Start=3314560><P class='en'>&nbsp;
+<SYNC Start=3314560><P class='en'>a conflict. And first between this head and these 
+equal signs, it shows the code that we have on the  
+<SYNC Start=3322600><P class='en'>&nbsp;
+<SYNC Start=3322600><P class='en'>current branch that we are on. And then it shows 
+the code coming from the other branch that we&#39;re  
+<SYNC Start=3329020><P class='en'>&nbsp;
+<SYNC Start=3329020><P class='en'>trying to merge in. So in this case, I am just 
+going to delete these lines and save both of the  
+<SYNC Start=3337420><P class='en'>&nbsp;
+<SYNC Start=3337420><P class='en'>changes. But in this case, one, two, line two and 
+one, two, line three. And this is just letting get  
+<SYNC Start=3342760><P class='en'>&nbsp;
+<SYNC Start=3342760><P class='en'>know what we want to do, because it didn&#39;t know 
+how to handle the conflict. Now we have handled it  
+<SYNC Start=3348790><P class='en'>&nbsp;
+<SYNC Start=3348790><P class='en'>and deleted the conflict markers, we can now look 
+here and see that we need to make another commit,  
+<SYNC Start=3355240><P class='en'>&nbsp;
+<SYNC Start=3355240><P class='en'>even though it seems like we are adding and 
+subtracting the same things, we basically  
+<SYNC Start=3360670><P class='en'>&nbsp;
+<SYNC Start=3360670><P class='en'>need to make a commit because we have fixed the 
+merge conflicts. So I&#39;m going to say here, git  
+<SYNC Start=3366970><P class='en'>&nbsp;
+<SYNC Start=3366970><P class='en'>commit dash a m, and I can say merged in Master, 
+or updated with Master or something like that.  
+<SYNC Start=3377830><P class='en'>&nbsp;
+<SYNC Start=3377830><P class='en'>And now I&#39;ve officially updated my branch with the 
+changes that have been happening on master branch,  
+<SYNC Start=3383350><P class='en'>&nbsp;
+<SYNC Start=3383350><P class='en'>and I can continue coding whatever feature bug fix 
+or whatever I&#39;m doing on this quick test branch.  
+<SYNC Start=3388900><P class='en'>&nbsp;
+<SYNC Start=3392170><P class='en'>So what if we make a mistake? What if we 
+accidentally add something or commit something to  
+<SYNC Start=3397810><P class='en'>&nbsp;
+<SYNC Start=3397810><P class='en'>get, and we didn&#39;t mean to do it, we can actually 
+undo our stages or our commits. So let me come to  
+<SYNC Start=3405670><P class='en'>&nbsp;
+<SYNC Start=3405670><P class='en'>read me, I&#39;m going to add another line here. And 
+say, have fun. Okay, so I&#39;ve made a change here on  
+<SYNC Start=3413590><P class='en'>&nbsp;
+<SYNC Start=3413590><P class='en'>line 12. And back in my demo rebill, I&#39;m going to 
+do git status. So now let&#39;s say I want to git add  
+<SYNC Start=3422770><P class='en'>&nbsp;
+<SYNC Start=3422770><P class='en'>this README. And let me do git status again, and 
+you can see before is that change is not staged,  
+<SYNC Start=3430390><P class='en'>&nbsp;
+<SYNC Start=3430390><P class='en'>and now changes to be committed, meaning they&#39;ve 
+been staged already. But what if I want to undo  
+<SYNC Start=3436900><P class='en'>&nbsp;
+<SYNC Start=3436900><P class='en'>staging, what if I didn&#39;t mean to stage this 
+file, I can actually easily undo it by using the  
+<SYNC Start=3442630><P class='en'>&nbsp;
+<SYNC Start=3442630><P class='en'>Git reset command. So I can either do Git reset 
+with no arguments, or I can say Git reset, and  
+<SYNC Start=3449650><P class='en'>&nbsp;
+<SYNC Start=3449650><P class='en'>just the name of the file that I want to onstage. 
+So here, I&#39;m just gonna do the plain Git reset,  
+<SYNC Start=3456580><P class='en'>&nbsp;
+<SYNC Start=3456580><P class='en'>and it gives me a list of the files. So unstaged 
+changes after reset README. Now, if I do another  
+<SYNC Start=3464140><P class='en'>&nbsp;
+<SYNC Start=3464140><P class='en'>git status, it shows me that this file is no 
+longer staged. So what if I want to undo a commit,  
+<SYNC Start=3471850><P class='en'>&nbsp;
+<SYNC Start=3471850><P class='en'>so let me go ahead and add the readme file. And 
+then I&#39;m going to come and commit, read me, and  
+<SYNC Start=3481360><P class='en'>&nbsp;
+<SYNC Start=3481360><P class='en'>I&#39;m going to say added install step. Now, if I do 
+git status, you&#39;ll see there&#39;s nothing to commit,  
+<SYNC Start=3489520><P class='en'>&nbsp;
+<SYNC Start=3489520><P class='en'>because all changes have now been committed. Well, 
+if I made a mistake on that commit, I can use that  
+<SYNC Start=3494860><P class='en'>&nbsp;
+<SYNC Start=3494860><P class='en'>same Git reset command. And this time, I&#39;m going 
+to say Git reset head in all caps. And what head  
+<SYNC Start=3503920><P class='en'>&nbsp;
+<SYNC Start=3503920><P class='en'>means to get is a pointer to the last commit. 
+So I&#39;m telling it to do something with the last  
+<SYNC Start=3509050><P class='en'>&nbsp;
+<SYNC Start=3509050><P class='en'>commit. And then I&#39;m going to save till the one, 
+which is telling Git instead of pointing to this  
+<SYNC Start=3516100><P class='en'>&nbsp;
+<SYNC Start=3516100><P class='en'>last commit that I just made, right here, 
+I want you to go back one commit further,  
+<SYNC Start=3521410><P class='en'>&nbsp;
+<SYNC Start=3521410><P class='en'>and head will now point back one commit further 
+meaning it will completely undo the commit that  
+<SYNC Start=3528340><P class='en'>&nbsp;
+<SYNC Start=3528340><P class='en'>I just made. Let me click Enter. And now you 
+can see it says I unstaged, the changes. So  
+<SYNC Start=3534970><P class='en'>&nbsp;
+<SYNC Start=3534970><P class='en'>I&#39;m going to say git status. And what happened 
+was that it unstaged and uncommitted, those last  
+<SYNC Start=3541660><P class='en'>&nbsp;
+<SYNC Start=3541660><P class='en'>changes. So if I do git diff, you&#39;ll see that 
+Git picks this up as a new change now. Now,  
+<SYNC Start=3549400><P class='en'>&nbsp;
+<SYNC Start=3549400><P class='en'>if you have many different commits, you might 
+want to go back to a specific commit or undo  
+<SYNC Start=3555250><P class='en'>&nbsp;
+<SYNC Start=3555250><P class='en'>multiple commits. And for that there&#39;s no quick 
+pointer in Git like the uppercase head pointer,  
+<SYNC Start=3562630><P class='en'>&nbsp;
+<SYNC Start=3562630><P class='en'>where you can just look at the last commit or 
+use that to undo the last commit. But you can  
+<SYNC Start=3568720><P class='en'>&nbsp;
+<SYNC Start=3568720><P class='en'>see a log of all your commits. And you&#39;ll see that 
+these are arranged in reverse chronological order.  
+<SYNC Start=3575410><P class='en'>&nbsp;
+<SYNC Start=3575410><P class='en'>So this is the latest commit that we made. And 
+you can see with the commit message, that&#39;s also  
+<SYNC Start=3581650><P class='en'>&nbsp;
+<SYNC Start=3581650><P class='en'>why it&#39;s important to write a good commit message 
+because it&#39;s easier for humans to scroll through  
+<SYNC Start=3587110><P class='en'>&nbsp;
+<SYNC Start=3587110><P class='en'>and see which commit is which to get these commits 
+are differentiated with this unique hash here. So  
+<SYNC Start=3594460><P class='en'>&nbsp;
+<SYNC Start=3594460><P class='en'>if you want to go back to a certain commit, you 
+can copy one of these hashes. Let&#39;s say I want  
+<SYNC Start=3601120><P class='en'>&nbsp;
+<SYNC Start=3601120><P class='en'>to go back to added world before I added the 
+there line. So I want to basically undo when I  
+<SYNC Start=3608200><P class='en'>&nbsp;
+<SYNC Start=3608200><P class='en'>merged this there, from Master into this branch. 
+So let me copy this commit hash. And by the way,  
+<SYNC Start=3616360><P class='en'>&nbsp;
+<SYNC Start=3616360><P class='en'>when you see all of these commits, you can scroll 
+down with spacebar, and now it shows this as the  
+<SYNC Start=3622000><P class='en'>&nbsp;
+<SYNC Start=3622000><P class='en'>end. So I&#39;ll say quit. So I&#39;m going to do Git 
+reset, and then the hash of that commit. And  
+<SYNC Start=3629440><P class='en'>&nbsp;
+<SYNC Start=3629440><P class='en'>it&#39;s unstaged, any changes made to these files 
+after this commit. So you can see the changes  
+<SYNC Start=3637629><P class='en'>&nbsp;
+<SYNC Start=3637630><P class='en'>are still there. I added have fun and this line 
+three in the index dot HTML, but they are just  
+<SYNC Start=3646060><P class='en'>&nbsp;
+<SYNC Start=3646060><P class='en'>not saved in Git or stage with Git any longer. 
+So what if I was just testing something out,  
+<SYNC Start=3651790><P class='en'>&nbsp;
+<SYNC Start=3651790><P class='en'>and I want to get rid of all of the changes after 
+a certain point? Well, I can do that by using  
+<SYNC Start=3659350><P class='en'>&nbsp;
+<SYNC Start=3659350><P class='en'>the Git reset command as well. Let me just grab a 
+commit hash. So I&#39;m going to go back just a couple  
+<SYNC Start=3667900><P class='en'>&nbsp;
+<SYNC Start=3667900><P class='en'>of random commits to this commit right here, where 
+I said updated README, can I hit Q. And now I&#39;m  
+<SYNC Start=3676210><P class='en'>&nbsp;
+<SYNC Start=3676210><P class='en'>going to do Git reset dash dash hard, meaning I 
+want all of the changes to not just be unstaged,  
+<SYNC Start=3684100><P class='en'>&nbsp;
+<SYNC Start=3684100><P class='en'>but to be completely removed. So head is now 
+pointing to a different commit, because I&#39;ve  
+<SYNC Start=3690580><P class='en'>&nbsp;
+<SYNC Start=3690580><P class='en'>undone several commits now. And if I look at my 
+files, we&#39;ve just completely gone back in time and  
+<SYNC Start=3696910><P class='en'>&nbsp;
+<SYNC Start=3696910><P class='en'>erased the latest updates. So those are the basics 
+of branching, merging, fixing merge conflicts,  
+<SYNC Start=3705640><P class='en'>&nbsp;
+<SYNC Start=3705640><P class='en'>and undoing staging and commits that you&#39;ve made. 
+One more thing that I want to quickly mention is  
+<SYNC Start=3713200><P class='en'>&nbsp;
+<SYNC Start=3713200><P class='en'>forking, you may have seen this already in 
+the Git interface, you can hit fork here,  
+<SYNC Start=3718930><P class='en'>&nbsp;
+<SYNC Start=3718930><P class='en'>and then it&#39;s going to make a complete copy of the 
+repository. Now, why would you want to fork? Well,  
+<SYNC Start=3726190><P class='en'>&nbsp;
+<SYNC Start=3726190><P class='en'>you probably don&#39;t want to fork your own repo 
+because you already have full access to all of the  
+<SYNC Start=3730990><P class='en'>&nbsp;
+<SYNC Start=3730990><P class='en'>code here, but you don&#39;t for other people&#39;s repos. 
+So let me find just a random repo on GitHub. Okay,  
+<SYNC Start=3740440><P class='en'>&nbsp;
+<SYNC Start=3740440><P class='en'>so here&#39;s view, j, s. So let me click on this. And 
+I actually don&#39;t have access to change anything  
+<SYNC Start=3747760><P class='en'>&nbsp;
+<SYNC Start=3747760><P class='en'>in this repo. So if I want to make a PR against 
+this repo, and request for my changes to be added,  
+<SYNC Start=3754990><P class='en'>&nbsp;
+<SYNC Start=3754990><P class='en'>or if I just want to be able to branch off of the 
+code in this repo and do whatever I want with it,  
+<SYNC Start=3763120><P class='en'>&nbsp;
+<SYNC Start=3763120><P class='en'>then I want to fork it. So I&#39;m going to hit the 
+fork button here and fork it to my user account.  
+<SYNC Start=3771990><P class='en'>&nbsp;
+<SYNC Start=3771990><P class='en'>These are just groups that I&#39;m a part of on 
+GitHub. Sometimes it takes a minute to fork  
+<SYNC Start=3778710><P class='en'>&nbsp;
+<SYNC Start=3778710><P class='en'>over all the code, especially with Vue JS because 
+it&#39;s a large repository. Alright. And now you can  
+<SYNC Start=3785400><P class='en'>&nbsp;
+<SYNC Start=3785400><P class='en'>see the repo is no longer under the View, j. s 
+organization. Now it&#39;s under my personal GitHub.  
+<SYNC Start=3793410><P class='en'>&nbsp;
+<SYNC Start=3793410><P class='en'>And now that I&#39;ve forked this, I have complete 
+control to make any updates or changes that I  
+<SYNC Start=3799170><P class='en'>&nbsp;
+<SYNC Start=3799170><P class='en'>want to this code. So if I want to come in to read 
+me, and hit the pencil, update this, I can say, Hi  
+<SYNC Start=3808440><P class='en'>&nbsp;
+<SYNC Start=3808440><P class='en'>there. And now I can come to the bottom and commit 
+changes again. So I can say, updated README or  
+<SYNC Start=3816120><P class='en'>&nbsp;
+<SYNC Start=3816120><P class='en'>whatever I want, I&#39;m just going to leave it with 
+the default text, again, commit to the dev branch.  
+<SYNC Start=3821790><P class='en'>&nbsp;
+<SYNC Start=3821790><P class='en'>So before we worked off the master branch as being 
+the default branch, but sometimes when you&#39;re  
+<SYNC Start=3829140><P class='en'>&nbsp;
+<SYNC Start=3829140><P class='en'>working in a larger project with other people, 
+you&#39;re going to want to create multiple branches,  
+<SYNC Start=3835620><P class='en'>&nbsp;
+<SYNC Start=3835620><P class='en'>like master staging, and dev for different kinds 
+of environments. So in this case, Dev is set to  
+<SYNC Start=3842880><P class='en'>&nbsp;
+<SYNC Start=3842880><P class='en'>the default branch for this repository, instead 
+of master. So I&#39;m just going to commit my changes  
+<SYNC Start=3848400><P class='en'>&nbsp;
+<SYNC Start=3848400><P class='en'>directly to Dev. And you can see my changes here. 
+Of course, they aren&#39;t part of the main view j s  
+<SYNC Start=3856980><P class='en'>&nbsp;
+<SYNC Start=3856980><P class='en'>view repository, but they&#39;re part of the one that 
+I forked because I forked a complete copy of that  
+<SYNC Start=3863910><P class='en'>&nbsp;
+<SYNC Start=3863910><P class='en'>repository, including the branches associated with 
+it. And you can see dev is marked as the default.  
+<SYNC Start=3871650><P class='en'>&nbsp;
+<SYNC Start=3871650><P class='en'>So now what if I wanted to get my changes back 
+into this Vue JS repository? Of course I don&#39;t,  
+<SYNC Start=3880080><P class='en'>&nbsp;
+<SYNC Start=3880080><P class='en'>but what if I did, I would go and create a pull 
+request. So new pull request, and then as my base  
+<SYNC Start=3888240><P class='en'>&nbsp;
+<SYNC Start=3888240><P class='en'>the place that I want to merge my changes into I 
+would put the repository that I forked from this  
+<SYNC Start=3894570><P class='en'>&nbsp;
+<SYNC Start=3894570><P class='en'>Vue JS repository, and the branch and I want to 
+compare that with My repository that I forked  
+<SYNC Start=3902340><P class='en'>&nbsp;
+<SYNC Start=3902340><P class='en'>and the branch on my repository that I updated, 
+of course, I&#39;m not going to click Create pull  
+<SYNC Start=3907690><P class='en'>&nbsp;
+<SYNC Start=3907690><P class='en'>request, because this is just a demo, I can also 
+see the diff down here of the changes that have  
+<SYNC Start=3914230><P class='en'>&nbsp;
+<SYNC Start=3914230><P class='en'>made and what commits I&#39;ve made to this branch on 
+my fork. Now, if I want to merge within my fork,  
+<SYNC Start=3920590><P class='en'>&nbsp;
+<SYNC Start=3920590><P class='en'>I can do that easily. Let&#39;s say, of course, there 
+isn&#39;t anything to compare because I&#39;m comparing  
+<SYNC Start=3926170><P class='en'>&nbsp;
+<SYNC Start=3926170><P class='en'>the same branch here. But I could merge into any 
+other branch. Let me find master here. So I could  
+<SYNC Start=3933610><P class='en'>&nbsp;
+<SYNC Start=3933610><P class='en'>merge straight into master. And you can see I 
+can create pull requests. Now, I created a pull  
+<SYNC Start=3940390><P class='en'>&nbsp;
+<SYNC Start=3940390><P class='en'>request. And I&#39;m going to create pull request. 
+And you can see they had a bunch of default text  
+<SYNC Start=3949520><P class='en'>&nbsp;
+<SYNC Start=3949520><P class='en'>added to the pull request information. But I&#39;m 
+just going to go ahead and merge. Go back to the  
+<SYNC Start=3958640><P class='en'>&nbsp;
+<SYNC Start=3958640><P class='en'>code. If I scroll down, of course, I&#39;m on Dev, 
+it says hi there. And now if I go to master,  
+<SYNC Start=3966890><P class='en'>&nbsp;
+<SYNC Start=3966890><P class='en'>it also has my changes on master because I merged 
+them. Generally speaking, after we merge a branch  
+<SYNC Start=3974959><P class='en'>&nbsp;
+<SYNC Start=3974960><P class='en'>into one of our default branches like Master, 
+then we would clean up the branch that has just  
+<SYNC Start=3981920><P class='en'>&nbsp;
+<SYNC Start=3981920><P class='en'>been merged. In other words, we would delete 
+it from GitHub and from our local machine,  
+<SYNC Start=3986270><P class='en'>&nbsp;
+<SYNC Start=3986270><P class='en'>because we&#39;re not using that branch anymore. But 
+it&#39;s a little bit different when we use branches  
+<SYNC Start=3992030><P class='en'>&nbsp;
+<SYNC Start=3992030><P class='en'>like Dev, staging and master, because generally, 
+you&#39;re merging your feature branches into either  
+<SYNC Start=3998750><P class='en'>&nbsp;
+<SYNC Start=3998750><P class='en'>dev or master. And you have Dev and master and 
+sometimes staging reserved for just merging into  
+<SYNC Start=4005830><P class='en'>&nbsp;
+<SYNC Start=4005830><P class='en'>so you don&#39;t make any changes on Dev and master 
+themselves. You&#39;ll just be merging other branches  
+<SYNC Start=4011920><P class='en'>&nbsp;
+<SYNC Start=4011920><P class='en'>into dev or Master, depending on how your codebase 
+is set up. In a large project like Vue js,  
+<SYNC Start=4018610><P class='en'>&nbsp;
+<SYNC Start=4018610><P class='en'>we would merge all of our feature branches or bug 
+fixes or whatever into the dev branch and then  
+<SYNC Start=4025210><P class='en'>&nbsp;
+<SYNC Start=4025210><P class='en'>delete the branch that we just merged in. And then 
+when all the changes on the dev branch are ready,  
+<SYNC Start=4030730><P class='en'>&nbsp;
+<SYNC Start=4030730><P class='en'>those get merged into master. But dev never gets 
+deleted, just like master never gets deleted,  
+<SYNC Start=4036430><P class='en'>&nbsp;
+<SYNC Start=4036430><P class='en'>those kind of stay around forever. All the other 
+branches are just temporary. So me having my own  
+<SYNC Start=4042010><P class='en'>&nbsp;
+<SYNC Start=4042010><P class='en'>fork allows me full rein, full access, full 
+control of CRUD operations, create, read,  
+<SYNC Start=4049630><P class='en'>&nbsp;
+<SYNC Start=4049630><P class='en'>update, delete whatever I want to do with all 
+of this code, all of these files. And if I want  
+<SYNC Start=4054970><P class='en'>&nbsp;
+<SYNC Start=4054970><P class='en'>to make some major updates, what I&#39;m going to 
+do is fork the repository, which I already did,  
+<SYNC Start=4060490><P class='en'>&nbsp;
+<SYNC Start=4060490><P class='en'>pull my fork down to my local machine, make all 
+the updates that I want to test them out whatever  
+<SYNC Start=4067300><P class='en'>&nbsp;
+<SYNC Start=4067300><P class='en'>I want to do, I&#39;ll push them back up to my fork, 
+and then I will create a PR against the original  
+<SYNC Start=4074590><P class='en'>&nbsp;
+<SYNC Start=4074590><P class='en'>repository. Thanks so much for watching. I hope 
+that you enjoyed this video and that you also got  
+<SYNC Start=4080380><P class='en'>&nbsp;
+<SYNC Start=4080380><P class='en'>something out of it. If you did, then don&#39;t forget 
+to like the video and subscribe to the Free Code  
+<SYNC Start=4085390><P class='en'>&nbsp;
+<SYNC Start=4085390><P class='en'>Camp channel. Don&#39;t forget to check out my YouTube 
+channel called Faraday Academy where I do weekly  
+<SYNC Start=4091360><P class='en'>&nbsp;
+<SYNC Start=4091360><P class='en'>videos and livestreams on Python and JavaScript 
+and other related programming topics. I would  
+<SYNC Start=4098350><P class='en'>&nbsp;
+<SYNC Start=4098350><P class='en'>also appreciate if you would leave me a comment 
+here and let me know what you liked about the  
+<SYNC Start=4102490><P class='en'>&nbsp;
+<SYNC Start=4102490><P class='en'>video or any other feedback that you might have. 
+Have a great day and I hope you enjoy using it
+<SYNC Start=4108970><P class='en'>&nbsp;
+</body>
+</sami>
